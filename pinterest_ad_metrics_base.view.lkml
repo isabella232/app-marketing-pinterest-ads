@@ -14,7 +14,7 @@ view: pinterest_ad_metrics_base_template {
 
   dimension: cost {
     type: number
-    sql: ${TABLE}.spend_in_micro_dollar ;;
+    sql: ${TABLE}.spend_in_micro_dollar  / 1000000;;
   }
 
 }
