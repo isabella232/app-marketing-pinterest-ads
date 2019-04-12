@@ -61,7 +61,7 @@ view: pinterest_keyword_date_fact {
       column: average_position {field: fact.weighted_average_position}
       column: clicks {field: fact.total_clicks }
       column: conversions {field: fact.total_conversions}
-      column: revenue {field: fact.total_conversionvalue}
+      column: conversionvalue {field: fact.total_conversionvalue}
       column: spend {field: fact.total_cost}
       column: impressions { field: fact.total_impressions}
     }
