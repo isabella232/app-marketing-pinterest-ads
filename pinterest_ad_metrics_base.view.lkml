@@ -9,7 +9,7 @@ view: pinterest_ad_metrics_base_template {
 
   dimension: conversionvalue {
     type: number
-    sql: ${TABLE}.total_conversions_value_in_micro_dollar;;
+    sql: ${TABLE}.total_conversions_value_in_micro_dollar / 1000000;;
   }
 
   dimension: cost {
