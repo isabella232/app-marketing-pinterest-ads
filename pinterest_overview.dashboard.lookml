@@ -6,27 +6,27 @@
     model: marketing_analytics
     explore: pinterest_ad_group_date_fact
     type: single_value
-    fields: [fact.total_cost_extended, last_fact.total_cost_extended, fact.total_conversions,
-      last_fact.total_conversions, fact.average_cost_per_conversion_extended, last_fact.average_cost_per_conversion_extended,
+    fields: [fact.total_cost, last_fact.total_cost, fact.total_conversions,
+      last_fact.total_conversions, fact.average_cost_per_conversion, last_fact.average_cost_per_conversion,
       fact.average_conversion_rate, last_fact.average_conversion_rate, fact.average_click_rate,
-      last_fact.average_click_rate, fact.cost_per_click_extended, last_fact.cost_per_click_extended]
+      last_fact.average_click_rate, fact.cost_per_click, last_fact.cost_per_click]
     filters:
       fact.period: 28 day
       fact.date_period_latest: 'Yes'
     sorts: [cost_per_conversion_percent_change]
     limit: 500
-    dynamic_fields: [{table_calculation: cost_change, label: Cost Change, expression: "${fact.total_cost_extended}\
-          \ - ${last_fact.total_cost_extended}", value_format: !!null '', value_format_name: usd_0,
+    dynamic_fields: [{table_calculation: cost_change, label: Cost Change, expression: "${fact.total_cost}\
+          \ - ${last_fact.total_cost}", value_format: !!null '', value_format_name: usd_0,
         _kind_hint: measure, _type_hint: number}, {table_calculation: total_conversion_change,
         label: Total Conversion Change, expression: "${fact.total_conversions} - ${last_fact.total_conversions}",
         value_format: !!null '', value_format_name: decimal_0, _kind_hint: measure,
         _type_hint: number}, {table_calculation: cost_per_conversion_percent_change,
-        label: Cost Per Conversion Percent Change, expression: "${fact.average_cost_per_conversion_extended}\
-          \ - ${last_fact.average_cost_per_conversion_extended}", value_format: !!null '',
+        label: Cost Per Conversion Percent Change, expression: "${fact.average_cost_per_conversion}\
+          \ - ${last_fact.average_cost_per_conversion}", value_format: !!null '',
         value_format_name: percent_0, _kind_hint: measure, _type_hint: number}, {
         table_calculation: cost_per_click_percent_change, label: Cost Per Click Percent
-          Change, expression: "(${fact.average_cost_per_conversion_extended} - ${last_fact.average_cost_per_conversion_extended})\
-          \ / ${last_fact.average_cost_per_conversion_extended}", value_format: !!null '',
+          Change, expression: "(${fact.average_cost_per_conversion} - ${last_fact.average_cost_per_conversion})\
+          \ / ${last_fact.average_cost_per_conversion}", value_format: !!null '',
         value_format_name: percent_0, _kind_hint: measure, _type_hint: number}, {
         table_calculation: conversion_rate_percent_change, label: Conversion Rate
           Percent Change, expression: "(${fact.average_conversion_rate} - ${last_fact.average_conversion_rate})\
@@ -44,10 +44,10 @@
     comparison_type: change
     comparison_reverse_colors: true
     show_comparison_label: false
-    hidden_fields: [last_fact.total_cost_extended, fact.total_conversions, last_fact.total_conversions,
+    hidden_fields: [last_fact.total_cost, fact.total_conversions, last_fact.total_conversions,
       fact.average_click_rate, last_fact.average_click_rate, fact.average_conversion_rate,
-      fact.average_cost_per_conversion_extended, last_fact.average_cost_per_conversion_extended,
-      last_fact.cost_per_click_extended, fact.cost_per_click_extended, last_fact.average_conversion_rate,
+      fact.average_cost_per_conversion, last_fact.average_cost_per_conversion,
+      last_fact.cost_per_click, fact.cost_per_click, last_fact.average_conversion_rate,
       total_conversion_change]
     row: 0
     col: 0
@@ -58,27 +58,27 @@
     model: marketing_analytics
     explore: pinterest_ad_group_date_fact
     type: single_value
-    fields: [fact.total_cost_extended, last_fact.total_cost_extended, fact.total_conversions,
-      last_fact.total_conversions, fact.average_cost_per_conversion_extended, last_fact.average_cost_per_conversion_extended,
+    fields: [fact.total_cost, last_fact.total_cost, fact.total_conversions,
+      last_fact.total_conversions, fact.average_cost_per_conversion, last_fact.average_cost_per_conversion,
       fact.average_conversion_rate, last_fact.average_conversion_rate, fact.average_click_rate,
-      last_fact.average_click_rate, fact.cost_per_click_extended, last_fact.cost_per_click_extended]
+      last_fact.average_click_rate, fact.cost_per_click, last_fact.cost_per_click]
     filters:
       fact.period: 28 day
       fact.date_period_latest: 'Yes'
     sorts: [cost_per_conversion_percent_change]
     limit: 500
-    dynamic_fields: [{table_calculation: cost_change, label: Cost Change, expression: "${fact.total_cost_extended}\
-          \ - ${last_fact.total_cost_extended}", value_format: !!null '', value_format_name: usd_0,
+    dynamic_fields: [{table_calculation: cost_change, label: Cost Change, expression: "${fact.total_cost}\
+          \ - ${last_fact.total_cost}", value_format: !!null '', value_format_name: usd_0,
         _kind_hint: measure, _type_hint: number}, {table_calculation: total_conversion_change,
         label: Total Conversion Change, expression: "${fact.total_conversions} - ${last_fact.total_conversions}",
         value_format: !!null '', value_format_name: decimal_0, _kind_hint: measure,
         _type_hint: number}, {table_calculation: cost_per_conversion_percent_change,
-        label: Cost Per Conversion Percent Change, expression: "${fact.average_cost_per_conversion_extended}\
-          \ - ${last_fact.average_cost_per_conversion_extended}", value_format: !!null '',
+        label: Cost Per Conversion Percent Change, expression: "${fact.average_cost_per_conversion}\
+          \ - ${last_fact.average_cost_per_conversion}", value_format: !!null '',
         value_format_name: percent_0, _kind_hint: measure, _type_hint: number}, {
         table_calculation: cost_per_click_percent_change, label: Cost Per Click Percent
-          Change, expression: "(${fact.average_cost_per_conversion_extended} - ${last_fact.average_cost_per_conversion_extended})\
-          \ / ${last_fact.average_cost_per_conversion_extended}", value_format: !!null '',
+          Change, expression: "(${fact.average_cost_per_conversion} - ${last_fact.average_cost_per_conversion})\
+          \ / ${last_fact.average_cost_per_conversion}", value_format: !!null '',
         value_format_name: percent_0, _kind_hint: measure, _type_hint: number}, {
         table_calculation: conversion_rate_percent_change, label: Conversion Rate
           Percent Change, expression: "(${fact.average_conversion_rate} - ${last_fact.average_conversion_rate})\
@@ -96,10 +96,10 @@
     comparison_type: change
     comparison_reverse_colors: false
     show_comparison_label: false
-    hidden_fields: [last_fact.total_cost_extended, last_fact.total_conversions, fact.average_click_rate,
-      last_fact.average_click_rate, fact.average_conversion_rate, fact.average_cost_per_conversion_extended,
-      last_fact.average_cost_per_conversion_extended, last_fact.cost_per_click_extended,
-      fact.cost_per_click_extended, last_fact.average_conversion_rate, fact.total_cost_extended,
+    hidden_fields: [last_fact.total_cost, last_fact.total_conversions, fact.average_click_rate,
+      last_fact.average_click_rate, fact.average_conversion_rate, fact.average_cost_per_conversion,
+      last_fact.average_cost_per_conversion, last_fact.cost_per_click,
+      fact.cost_per_click, last_fact.average_conversion_rate, fact.total_cost,
       cost_change]
     row: 0
     col: 9
@@ -110,27 +110,27 @@
     model: marketing_analytics
     explore: pinterest_ad_group_date_fact
     type: single_value
-    fields: [fact.total_cost_extended, last_fact.total_cost_extended, fact.total_conversions,
-      last_fact.total_conversions, fact.average_cost_per_conversion_extended, last_fact.average_cost_per_conversion_extended,
+    fields: [fact.total_cost, last_fact.total_cost, fact.total_conversions,
+      last_fact.total_conversions, fact.average_cost_per_conversion, last_fact.average_cost_per_conversion,
       fact.average_conversion_rate, last_fact.average_conversion_rate, fact.average_click_rate,
-      last_fact.average_click_rate, fact.cost_per_click_extended, last_fact.cost_per_click_extended]
+      last_fact.average_click_rate, fact.cost_per_click, last_fact.cost_per_click]
     filters:
       fact.period: 28 day
       fact.date_period_latest: 'Yes'
     sorts: [cost_per_conversion_percent_change]
     limit: 500
-    dynamic_fields: [{table_calculation: cost_change, label: Cost Change, expression: "${fact.total_cost_extended}\
-          \ - ${last_fact.total_cost_extended}", value_format: !!null '', value_format_name: usd_0,
+    dynamic_fields: [{table_calculation: cost_change, label: Cost Change, expression: "${fact.total_cost}\
+          \ - ${last_fact.total_cost}", value_format: !!null '', value_format_name: usd_0,
         _kind_hint: measure, _type_hint: number}, {table_calculation: total_conversion_change,
         label: Total Conversion Change, expression: "${fact.total_conversions} - ${last_fact.total_conversions}",
         value_format: !!null '', value_format_name: decimal_0, _kind_hint: measure,
         _type_hint: number}, {table_calculation: cost_per_conversion_percent_change,
-        label: Cost Per Conversion Percent Change, expression: "${fact.average_cost_per_conversion_extended}\
-          \ - ${last_fact.average_cost_per_conversion_extended}", value_format: !!null '',
+        label: Cost Per Conversion Percent Change, expression: "${fact.average_cost_per_conversion}\
+          \ - ${last_fact.average_cost_per_conversion}", value_format: !!null '',
         value_format_name: percent_0, _kind_hint: measure, _type_hint: number}, {
         table_calculation: cost_per_click_percent_change, label: Cost Per Click Percent
-          Change, expression: "(${fact.average_cost_per_conversion_extended} - ${last_fact.average_cost_per_conversion_extended})\
-          \ / ${last_fact.average_cost_per_conversion_extended}", value_format: !!null '',
+          Change, expression: "(${fact.average_cost_per_conversion} - ${last_fact.average_cost_per_conversion})\
+          \ / ${last_fact.average_cost_per_conversion}", value_format: !!null '',
         value_format_name: percent_0, _kind_hint: measure, _type_hint: number}, {
         table_calculation: conversion_rate_percent_change, label: Conversion Rate
           Percent Change, expression: "(${fact.average_conversion_rate} - ${last_fact.average_conversion_rate})\
@@ -148,10 +148,10 @@
     comparison_type: change
     comparison_reverse_colors: true
     show_comparison_label: false
-    hidden_fields: [last_fact.total_cost_extended, last_fact.total_conversions, fact.average_click_rate,
-      last_fact.average_click_rate, fact.average_conversion_rate, last_fact.average_cost_per_conversion_extended,
-      last_fact.cost_per_click_extended, fact.cost_per_click_extended, last_fact.average_conversion_rate,
-      fact.total_cost_extended, cost_change, fact.total_conversions, total_conversion_change,
+    hidden_fields: [last_fact.total_cost, last_fact.total_conversions, fact.average_click_rate,
+      last_fact.average_click_rate, fact.average_conversion_rate, last_fact.average_cost_per_conversion,
+      last_fact.cost_per_click, fact.cost_per_click, last_fact.average_conversion_rate,
+      fact.total_cost, cost_change, fact.total_conversions, total_conversion_change,
       cost_per_click_percent_change, conversion_rate_percent_change, click_through_rate_percent_change]
     row: 0
     col: 14
@@ -162,27 +162,27 @@
     model: marketing_analytics
     explore: pinterest_ad_group_date_fact
     type: single_value
-    fields: [fact.total_cost_extended, last_fact.total_cost_extended, fact.total_conversions,
-      last_fact.total_conversions, fact.average_cost_per_conversion_extended, last_fact.average_cost_per_conversion_extended,
+    fields: [fact.total_cost, last_fact.total_cost, fact.total_conversions,
+      last_fact.total_conversions, fact.average_cost_per_conversion, last_fact.average_cost_per_conversion,
       fact.average_conversion_rate, last_fact.average_conversion_rate, fact.average_click_rate,
-      last_fact.average_click_rate, fact.cost_per_click_extended, last_fact.cost_per_click_extended]
+      last_fact.average_click_rate, fact.cost_per_click, last_fact.cost_per_click]
     filters:
       fact.period: 28 day
       fact.date_period_latest: 'Yes'
     sorts: [cost_per_conversion_percent_change]
     limit: 500
-    dynamic_fields: [{table_calculation: cost_change, label: Cost Change, expression: "${fact.total_cost_extended}\
-          \ - ${last_fact.total_cost_extended}", value_format: !!null '', value_format_name: usd_0,
+    dynamic_fields: [{table_calculation: cost_change, label: Cost Change, expression: "${fact.total_cost}\
+          \ - ${last_fact.total_cost}", value_format: !!null '', value_format_name: usd_0,
         _kind_hint: measure, _type_hint: number}, {table_calculation: total_conversion_change,
         label: Total Conversion Change, expression: "${fact.total_conversions} - ${last_fact.total_conversions}",
         value_format: !!null '', value_format_name: decimal_0, _kind_hint: measure,
         _type_hint: number}, {table_calculation: cost_per_conversion_percent_change,
-        label: Cost Per Conversion Percent Change, expression: "${fact.average_cost_per_conversion_extended}\
-          \ - ${last_fact.average_cost_per_conversion_extended}", value_format: !!null '',
+        label: Cost Per Conversion Percent Change, expression: "${fact.average_cost_per_conversion}\
+          \ - ${last_fact.average_cost_per_conversion}", value_format: !!null '',
         value_format_name: percent_0, _kind_hint: measure, _type_hint: number}, {
         table_calculation: cost_per_click_percent_change, label: Cost Per Click Percent
-          Change, expression: "(${fact.average_cost_per_conversion_extended} - ${last_fact.average_cost_per_conversion_extended})\
-          \ / ${last_fact.average_cost_per_conversion_extended}", value_format: !!null '',
+          Change, expression: "(${fact.average_cost_per_conversion} - ${last_fact.average_cost_per_conversion})\
+          \ / ${last_fact.average_cost_per_conversion}", value_format: !!null '',
         value_format_name: percent_0, _kind_hint: measure, _type_hint: number}, {
         table_calculation: conversion_rate_percent_change, label: Conversion Rate
           Percent Change, expression: "(${fact.average_conversion_rate} - ${last_fact.average_conversion_rate})\
@@ -200,12 +200,12 @@
     comparison_type: change
     comparison_reverse_colors: false
     show_comparison_label: false
-    hidden_fields: [last_fact.total_cost_extended, last_fact.total_conversions, fact.average_click_rate,
-      last_fact.average_click_rate, last_fact.average_cost_per_conversion_extended,
-      last_fact.cost_per_click_extended, fact.cost_per_click_extended, last_fact.average_conversion_rate,
-      fact.total_cost_extended, cost_change, fact.total_conversions, total_conversion_change,
+    hidden_fields: [last_fact.total_cost, last_fact.total_conversions, fact.average_click_rate,
+      last_fact.average_click_rate, last_fact.average_cost_per_conversion,
+      last_fact.cost_per_click, fact.cost_per_click, last_fact.average_conversion_rate,
+      fact.total_cost, cost_change, fact.total_conversions, total_conversion_change,
       cost_per_click_percent_change, click_through_rate_percent_change, cost_per_conversion_percent_change,
-      fact.average_cost_per_conversion_extended]
+      fact.average_cost_per_conversion]
     row: 0
     col: 19
     width: 5
@@ -215,7 +215,7 @@
     model: marketing_analytics
     explore: pinterest_ad_group_date_fact
     type: looker_line
-    fields: [fact.date_date, fact.average_cost_per_conversion_extended, fact.average_conversion_rate,
+    fields: [fact.date_date, fact.average_cost_per_conversion, fact.average_conversion_rate,
       fact.total_conversions]
     fill_fields: [fact.date_date]
     filters:
@@ -232,8 +232,8 @@
     x_axis_gridlines: false
     y_axis_gridlines: true
     show_view_names: false
-    y_axes: [{label: '', orientation: left, series: [{axisId: fact.average_cost_per_conversion_extended,
-            id: fact.average_cost_per_conversion_extended, name: Cost per Conversion.}],
+    y_axes: [{label: '', orientation: left, series: [{axisId: fact.average_cost_per_conversion,
+            id: fact.average_cost_per_conversion, name: Cost per Conversion.}],
         showLabels: true, showValues: true, unpinAxis: false, tickDensity: default,
         tickDensityCustom: 5, type: linear}, {label: !!null '', orientation: left,
         series: [{axisId: fact.average_conversion_rate, id: fact.average_conversion_rate,
@@ -262,7 +262,7 @@
     series_colors:
       fact.cumulative_spend: "#4bb86a"
       last_fact.cumulative_spend: "#8fe4a7"
-      fact.average_cost_per_conversion_extended: "#7869df"
+      fact.average_cost_per_conversion: "#7869df"
       fact.average_conversion_rate: "#6e98f9"
       fact.total_conversions: "#8ac8ca"
     series_labels:
@@ -295,7 +295,7 @@
     model: marketing_analytics
     explore: pinterest_ad_group_date_fact
     type: looker_area
-    fields: [fact.date_day_of_period, fact.cumulative_spend_extended, last_fact.cumulative_spend_extended]
+    fields: [fact.date_day_of_period, fact.cumulative_spend, last_fact.cumulative_spend]
     filters:
       fact.period: 28 day
       fact.date_period_latest: 'Yes'
@@ -319,13 +319,13 @@
     series_colors:
       fact.cumulative_spend: "#4bb86a"
       last_fact.cumulative_spend: "#8fe4a7"
-      fact.cumulative_spend_extended: "#4bb86a"
-      last_fact.cumulative_spend_extended: "#8fe4a7"
+      fact.cumulative_spend: "#4bb86a"
+      last_fact.cumulative_spend: "#8fe4a7"
     series_labels:
       fact.cumulative_spend: This Period
       last_fact.cumulative_spend: Prior Period
-      fact.cumulative_spend_extended: This Period
-      last_fact.cumulative_spend_extended: Last Period
+      fact.cumulative_spend: This Period
+      last_fact.cumulative_spend: Last Period
     series_types: {}
     limit_displayed_rows: false
     y_axis_combined: true
@@ -439,27 +439,27 @@
     model: marketing_analytics
     explore: pinterest_ad_group_date_fact
     type: single_value
-    fields: [fact.total_cost_extended, last_fact.total_cost_extended, fact.total_conversions,
-      last_fact.total_conversions, fact.average_cost_per_conversion_extended, last_fact.average_cost_per_conversion_extended,
+    fields: [fact.total_cost, last_fact.total_cost, fact.total_conversions,
+      last_fact.total_conversions, fact.average_cost_per_conversion, last_fact.average_cost_per_conversion,
       fact.average_conversion_rate, last_fact.average_conversion_rate, fact.average_click_rate,
-      last_fact.average_click_rate, fact.cost_per_click_extended, last_fact.cost_per_click_extended]
+      last_fact.average_click_rate, fact.cost_per_click, last_fact.cost_per_click]
     filters:
       fact.period: 28 day
       fact.date_period_latest: 'Yes'
     sorts: [cost_per_conversion_percent_change]
     limit: 500
-    dynamic_fields: [{table_calculation: cost_change, label: Cost Change, expression: "${fact.total_cost_extended}\
-          \ - ${last_fact.total_cost_extended}", value_format: !!null '', value_format_name: usd_0,
+    dynamic_fields: [{table_calculation: cost_change, label: Cost Change, expression: "${fact.total_cost}\
+          \ - ${last_fact.total_cost}", value_format: !!null '', value_format_name: usd_0,
         _kind_hint: measure, _type_hint: number}, {table_calculation: total_conversion_change,
         label: Total Conversion Change, expression: "${fact.total_conversions} - ${last_fact.total_conversions}",
         value_format: !!null '', value_format_name: decimal_0, _kind_hint: measure,
         _type_hint: number}, {table_calculation: cost_per_conversion_percent_change,
-        label: Cost Per Conversion Percent Change, expression: "${fact.average_cost_per_conversion_extended}\
-          \ - ${last_fact.average_cost_per_conversion_extended}", value_format: !!null '',
+        label: Cost Per Conversion Percent Change, expression: "${fact.average_cost_per_conversion}\
+          \ - ${last_fact.average_cost_per_conversion}", value_format: !!null '',
         value_format_name: percent_0, _kind_hint: measure, _type_hint: number}, {
         table_calculation: cost_per_click_percent_change, label: Cost Per Click Percent
-          Change, expression: "(${fact.average_cost_per_conversion_extended} - ${last_fact.average_cost_per_conversion_extended})\
-          \ / ${last_fact.average_cost_per_conversion_extended}", value_format: !!null '',
+          Change, expression: "(${fact.average_cost_per_conversion} - ${last_fact.average_cost_per_conversion})\
+          \ / ${last_fact.average_cost_per_conversion}", value_format: !!null '',
         value_format_name: percent_0, _kind_hint: measure, _type_hint: number}, {
         table_calculation: conversion_rate_percent_change, label: Conversion Rate
           Percent Change, expression: "(${fact.average_conversion_rate} - ${last_fact.average_conversion_rate})\
@@ -477,11 +477,11 @@
     comparison_type: change
     comparison_reverse_colors: false
     show_comparison_label: false
-    hidden_fields: [last_fact.total_cost_extended, fact.total_conversions, last_fact.total_conversions,
-      last_fact.average_click_rate, fact.average_conversion_rate, fact.average_cost_per_conversion_extended,
-      last_fact.average_cost_per_conversion_extended, last_fact.cost_per_click_extended,
-      fact.cost_per_click_extended, last_fact.average_conversion_rate, total_conversion_change,
-      fact.total_cost_extended, cost_change, cost_per_conversion_percent_change, cost_per_click_percent_change,
+    hidden_fields: [last_fact.total_cost, fact.total_conversions, last_fact.total_conversions,
+      last_fact.average_click_rate, fact.average_conversion_rate, fact.average_cost_per_conversion,
+      last_fact.average_cost_per_conversion, last_fact.cost_per_click,
+      fact.cost_per_click, last_fact.average_conversion_rate, total_conversion_change,
+      fact.total_cost, cost_change, cost_per_conversion_percent_change, cost_per_click_percent_change,
       conversion_rate_percent_change]
     listen: {}
     row: 13
@@ -493,27 +493,27 @@
     model: marketing_analytics
     explore: pinterest_ad_group_date_fact
     type: single_value
-    fields: [fact.total_cost_extended, last_fact.total_cost_extended, fact.total_conversions,
-      last_fact.total_conversions, fact.average_cost_per_conversion_extended, last_fact.average_cost_per_conversion_extended,
+    fields: [fact.total_cost, last_fact.total_cost, fact.total_conversions,
+      last_fact.total_conversions, fact.average_cost_per_conversion, last_fact.average_cost_per_conversion,
       fact.average_conversion_rate, last_fact.average_conversion_rate, fact.average_click_rate,
-      last_fact.average_click_rate, fact.cost_per_click_extended, last_fact.cost_per_click_extended]
+      last_fact.average_click_rate, fact.cost_per_click, last_fact.cost_per_click]
     filters:
       fact.period: 28 day
       fact.date_period_latest: 'Yes'
     sorts: [cost_per_conversion_percent_change]
     limit: 500
-    dynamic_fields: [{table_calculation: cost_change, label: Cost Change, expression: "${fact.total_cost_extended}\
-          \ - ${last_fact.total_cost_extended}", value_format: !!null '', value_format_name: usd_0,
+    dynamic_fields: [{table_calculation: cost_change, label: Cost Change, expression: "${fact.total_cost}\
+          \ - ${last_fact.total_cost}", value_format: !!null '', value_format_name: usd_0,
         _kind_hint: measure, _type_hint: number}, {table_calculation: total_conversion_change,
         label: Total Conversion Change, expression: "${fact.total_conversions} - ${last_fact.total_conversions}",
         value_format: !!null '', value_format_name: decimal_0, _kind_hint: measure,
         _type_hint: number}, {table_calculation: cost_per_conversion_percent_change,
-        label: Cost Per Conversion Percent Change, expression: "${fact.average_cost_per_conversion_extended}\
-          \ - ${last_fact.average_cost_per_conversion_extended}", value_format: !!null '',
+        label: Cost Per Conversion Percent Change, expression: "${fact.average_cost_per_conversion}\
+          \ - ${last_fact.average_cost_per_conversion}", value_format: !!null '',
         value_format_name: percent_0, _kind_hint: measure, _type_hint: number}, {
         table_calculation: cost_per_click_percent_change, label: Cost Per Click Percent
-          Change, expression: "(${fact.average_cost_per_conversion_extended} - ${last_fact.average_cost_per_conversion_extended})\
-          \ / ${last_fact.average_cost_per_conversion_extended}", value_format: !!null '',
+          Change, expression: "(${fact.average_cost_per_conversion} - ${last_fact.average_cost_per_conversion})\
+          \ / ${last_fact.average_cost_per_conversion}", value_format: !!null '',
         value_format_name: percent_0, _kind_hint: measure, _type_hint: number}, {
         table_calculation: conversion_rate_percent_change, label: Conversion Rate
           Percent Change, expression: "(${fact.average_conversion_rate} - ${last_fact.average_conversion_rate})\
@@ -531,11 +531,11 @@
     comparison_type: change
     comparison_reverse_colors: true
     show_comparison_label: false
-    hidden_fields: [last_fact.total_cost_extended, fact.total_conversions, last_fact.total_conversions,
-      last_fact.average_click_rate, fact.average_conversion_rate, fact.average_cost_per_conversion_extended,
-      last_fact.average_cost_per_conversion_extended, last_fact.average_conversion_rate,
-      total_conversion_change, fact.total_cost_extended, cost_change, cost_per_conversion_percent_change,
-      conversion_rate_percent_change, last_fact.cost_per_click_extended, click_through_rate_percent_change,
+    hidden_fields: [last_fact.total_cost, fact.total_conversions, last_fact.total_conversions,
+      last_fact.average_click_rate, fact.average_conversion_rate, fact.average_cost_per_conversion,
+      last_fact.average_cost_per_conversion, last_fact.average_conversion_rate,
+      total_conversion_change, fact.total_cost, cost_change, cost_per_conversion_percent_change,
+      conversion_rate_percent_change, last_fact.cost_per_click, click_through_rate_percent_change,
       fact.average_click_rate]
     listen: {}
     row: 16
@@ -547,7 +547,7 @@
     model: marketing_analytics
     explore: pinterest_ad_group_date_fact
     type: looker_line
-    fields: [fact.date_date, fact.cost_per_click_extended, fact.average_click_rate,
+    fields: [fact.date_date, fact.cost_per_click, fact.average_click_rate,
       fact.total_clicks]
     fill_fields: [fact.date_date]
     filters:
@@ -564,8 +564,8 @@
     x_axis_gridlines: false
     y_axis_gridlines: true
     show_view_names: false
-    y_axes: [{label: '', orientation: left, series: [{axisId: fact.cost_per_click_extended,
-            id: fact.cost_per_click_extended, name: Cost per Click}], showLabels: true,
+    y_axes: [{label: '', orientation: left, series: [{axisId: fact.cost_per_click,
+            id: fact.cost_per_click, name: Cost per Click}], showLabels: true,
         showValues: true, unpinAxis: false, tickDensity: default, type: linear}, {
         label: !!null '', orientation: left, series: [{axisId: fact.average_click_rate,
             id: fact.average_click_rate, name: Click Through Rate}], showLabels: true,
@@ -594,10 +594,10 @@
     series_colors:
       fact.cumulative_spend: "#4bb86a"
       last_fact.cumulative_spend: "#8fe4a7"
-      fact.average_cost_per_conversion_extended: "#7869df"
+      fact.average_cost_per_conversion: "#7869df"
       fact.average_conversion_rate: "#6e98f9"
       fact.total_conversions: "#8ac8ca"
-      fact.cost_per_click_extended: "#d06180"
+      fact.cost_per_click: "#d06180"
       fact.average_click_rate: "#a4a6a9"
       fact.total_clicks: "#7869df"
     series_labels:

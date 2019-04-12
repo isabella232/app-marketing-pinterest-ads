@@ -64,13 +64,26 @@ view: pinterest_ad_date_fact {
       column: clicks {field: fact.total_clicks }
       column: conversions {field: fact.total_conversions}
       column: conversionvalue {field: fact.total_conversionvalue}
-      column: spend {field: fact.total_cost}
+      column: cost {field: fact.total_cost}
       column: impressions { field: fact.total_impressions}
     }
   }
   dimension: ad_id {
     hidden: yes
   }
+
+  dimension: conversionvalue {
+    type: number
+    hidden:  yes
+    sql: ${TABLE}.conversionvalue ;;
+  }
+
+  dimension: cost {
+    type: number
+    hidden:  yes
+    sql: ${TABLE}.cost ;;
+  }
+
   set: detail {
     fields: [account_id, campaign_id, ad_group_id, ad_id]
   }

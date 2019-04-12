@@ -7,8 +7,8 @@ view: pinterest_date_fact {
       column: average_position {field: fact.weighted_average_position}
       column: clicks {field: fact.total_clicks }
       column: conversions {field: fact.total_conversions}
-      column: revenue {field: fact.total_conversionvalue}
-      column: spend {field: fact.total_cost}
+      column: conversionvalue {field: fact.total_conversionvalue}
+      column: cost {field: fact.total_cost}
       column: impressions { field: fact.total_impressions}
       bind_filters: {
         from_field: total.period
@@ -23,6 +23,18 @@ view: pinterest_date_fact {
     primary_key: yes
     type: date
     convert_tz: no
+  }
+
+  dimension: conversionvalue {
+    type: number
+    hidden:  yes
+    sql: ${TABLE}.conversionvalue ;;
+  }
+
+  dimension: cost {
+    type: number
+    hidden:  yes
+    sql: ${TABLE}.cost ;;
   }
 
   parameter: period {
