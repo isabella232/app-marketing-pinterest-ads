@@ -86,4 +86,159 @@
     row: 0
     col: 0
     width: 24
-    height: 12
+    height: 11
+  - title: Cost Per Conversion By Day of Week
+    name: Cost Per Conversion By Day of Week
+    model: marketing_analytics
+    explore: pinterest_ad_group_date_fact
+    type: looker_bar
+    fields: [fact.average_cost_per_conversion, fact.date_day_of_week]
+    fill_fields: [fact.date_day_of_week]
+    filters:
+      fact.period: 28 day
+      fact.date_period_latest: 'Yes'
+    sorts: [fact.average_cost_per_conversion desc]
+    limit: 500
+    query_timezone: America/New_York
+    color_application:
+      collection_id: legacy
+      palette_id: fuchsia_to_green
+      options:
+        steps: 5
+        __FILE: app-marketing-pinterest-ads/pinterest_overview.dashboard.lookml
+        __LINE_NUM: 231
+    x_axis_gridlines: false
+    y_axis_gridlines: false
+    show_view_names: false
+    y_axes: [{label: '', orientation: bottom, series: [{axisId: fact.average_cost_per_conversion,
+            id: fact.average_cost_per_conversion, name: Cost per Conversion}], showLabels: false,
+        showValues: false, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
+        type: linear}]
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: false
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    limit_displayed_rows: false
+    hidden_series: [fact.average_conversion_rate, fact.total_conversions, fact.average_cost_per_click,
+      fact.average_click_rate, fact.total_cost]
+    legend_position: center
+    series_types: {}
+    point_style: none
+    series_colors:
+      fact.cumulative_spend: "#4bb86a"
+      last_fact.cumulative_spend: "#8fe4a7"
+      fact.average_cost_per_conversion: "#7869df"
+      fact.average_conversion_rate: "#6e98f9"
+      fact.total_conversions: "#8ac8ca"
+    series_labels:
+      fact.cumulative_spend: This Period
+      last_fact.cumulative_spend: Prior Period
+    show_value_labels: true
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    show_null_points: true
+    interpolation: linear
+    custom_color_enabled: true
+    custom_color: ''
+    show_single_value_title: true
+    show_comparison: true
+    comparison_type: change
+    comparison_reverse_colors: true
+    show_comparison_label: false
+    hidden_fields: [total_conversion_change]
+    listen: {}
+    row: 11
+    col: 0
+    width: 12
+    height: 8
+  - title: Cost Per Conversion By Bid Type
+    name: Cost Per Conversion By Bid Type
+    model: marketing_analytics
+    explore: pinterest_ad_group_date_fact
+    type: looker_bar
+    fields: [fact.average_cost_per_conversion, ad_group.bid_type]
+    filters:
+      fact.period: 28 day
+      fact.date_period_latest: 'Yes'
+    sorts: [fact.average_cost_per_conversion desc]
+    limit: 500
+    query_timezone: America/New_York
+    color_application:
+      collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7
+      palette_id: fb7bb53e-b77b-4ab6-8274-9d420d3d73f3
+      options:
+        steps: 5
+        __FILE: app-marketing-pinterest-ads/pinterest_overview.dashboard.lookml
+        __LINE_NUM: 231
+    x_axis_gridlines: false
+    y_axis_gridlines: false
+    show_view_names: false
+    y_axes: [{label: '', orientation: bottom, series: [{axisId: fact.average_cost_per_conversion,
+            id: fact.average_cost_per_conversion, name: Cost per Conversion}], showLabels: false,
+        showValues: false, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
+        type: linear}]
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: false
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    limit_displayed_rows: false
+    hidden_series: [fact.average_conversion_rate, fact.total_conversions, fact.average_cost_per_click,
+      fact.average_click_rate, fact.total_cost]
+    legend_position: center
+    series_types: {}
+    point_style: none
+    series_colors:
+      fact.cumulative_spend: "#4bb86a"
+      last_fact.cumulative_spend: "#8fe4a7"
+      fact.average_cost_per_conversion: "#592EC2"
+      fact.average_conversion_rate: "#6e98f9"
+      fact.total_conversions: "#8ac8ca"
+    series_labels:
+      fact.cumulative_spend: This Period
+      last_fact.cumulative_spend: Prior Period
+    show_value_labels: true
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    show_null_points: true
+    interpolation: linear
+    custom_color_enabled: true
+    custom_color: ''
+    show_single_value_title: true
+    show_comparison: true
+    comparison_type: change
+    comparison_reverse_colors: true
+    show_comparison_label: false
+    hidden_fields: [total_conversion_change]
+    listen: {}
+    row: 11
+    col: 12
+    width: 12
+    height: 8
