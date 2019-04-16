@@ -22,7 +22,6 @@ explore: pinterest_ad_date_fact {
     from: pinterest_ad_group_date_fact
     view_label: "Ad Group This Period"
     sql_on: ${fact.account_id} = ${parent_fact.account_id} AND
-      ${fact.campaign_id} = ${parent_fact.campaign_id} AND
       ${fact.ad_group_id} = ${parent_fact.ad_group_id} AND
       ${fact.date_date} = ${parent_fact.date_date} ;;
     relationship: many_to_one
@@ -72,6 +71,20 @@ view: pinterest_ad_date_fact {
     hidden: yes
   }
 
+  dimension: ad_group_id {
+    hidden: yes
+  }
+
+  dimension: ad_id_string {
+    hidden: yes
+    sql: CAST(${ad_id} as STRING) ;;
+  }
+
+  dimension: ad_group_id_string {
+    hidden: yes
+    sql: CAST(${ad_group_id} as STRING) ;;
+  }
+
   dimension: conversionvalue {
     type: number
     hidden:  yes
@@ -82,6 +95,10 @@ view: pinterest_ad_date_fact {
     type: number
     hidden:  yes
     sql: ${TABLE}.cost ;;
+  }
+
+  dimension: campaign_id {
+    hidden:  yes
   }
 
   set: detail {
