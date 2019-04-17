@@ -260,26 +260,9 @@
     limit: 50
     column_limit: 50
     query_timezone: America/Los_Angeles
-    stacking: ''
-    colors: ["#7869df", "#a6b7ff", "#6e98f9", "#8ac8ca", "#d06180", "#dc9d4f", "#4bb86a",
-      "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea9895", "#f1e582"]
-    show_value_labels: true
-    label_density: 25
-    legend_position: center
     x_axis_gridlines: false
     y_axis_gridlines: false
     show_view_names: false
-    point_style: none
-    series_colors: {}
-    series_labels:
-      fact.average_click_rate: This Period
-      last_fact.average_click_rate: Prior Period
-    series_types: {}
-    limit_displayed_rows: true
-    limit_displayed_rows_values:
-      show_hide: show
-      first_last: first
-      num_rows: '10'
     y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: bottom,
         showLabels: true, showValues: false, tickDensity: default, tickDensityCustom: !!null '',
         type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: fact.average_click_rate,
@@ -288,18 +271,38 @@
               Fact, axisId: last_fact.average_click_rate, __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_click_through_rate.dashboard.lookml,
             __LINE_NUM: 527}], __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_click_through_rate.dashboard.lookml,
         __LINE_NUM: 510}]
-    y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
     y_axis_tick_density: default
     y_axis_tick_density_custom: 5
     show_x_axis_label: false
     show_x_axis_ticks: true
-    x_axis_scale: auto
     y_axis_scale_mode: linear
     x_axis_reversed: false
     y_axis_reversed: false
     plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    limit_displayed_rows: true
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '10'
+    legend_position: center
+    colors: ["#7869df", "#a6b7ff", "#6e98f9", "#8ac8ca", "#d06180", "#dc9d4f", "#4bb86a",
+      "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea9895", "#f1e582"]
+    series_types: {}
+    point_style: none
+    series_colors:
+      fact.average_click_rate: "#a31e67"
+      last_fact.average_click_rate: "#fccde5"
+    series_labels:
+      fact.average_click_rate: This Period
+      last_fact.average_click_rate: Prior Period
+    show_value_labels: true
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
     ordering: none
     show_null_labels: false
     show_totals_labels: false
@@ -315,6 +318,7 @@
     conditional_formatting_include_nulls: false
     hidden_fields: [campaign.name, fact.total_clicks, fact.total_impressions, last_fact.total_clicks,
       last_fact.total_impressions, fact.average_click_rate_period_percent_change]
+    listen: {}
     row: 19
     col: 0
     width: 8
@@ -337,26 +341,9 @@
     limit: 50
     column_limit: 50
     query_timezone: America/Los_Angeles
-    stacking: ''
-    colors: ["#7869df", "#a6b7ff", "#6e98f9", "#8ac8ca", "#d06180", "#dc9d4f", "#4bb86a",
-      "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea9895", "#f1e582"]
-    show_value_labels: true
-    label_density: 25
-    legend_position: center
     x_axis_gridlines: false
     y_axis_gridlines: false
     show_view_names: false
-    point_style: none
-    series_colors: {}
-    series_labels:
-      fact.average_click_rate: This Period
-      last_fact.average_click_rate: Prior Period
-    series_types: {}
-    limit_displayed_rows: true
-    limit_displayed_rows_values:
-      show_hide: show
-      first_last: first
-      num_rows: '10'
     y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: bottom,
         showLabels: true, showValues: false, tickDensity: default, tickDensityCustom: !!null '',
         type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: fact.average_click_rate,
@@ -365,18 +352,38 @@
               Fact, axisId: last_fact.average_click_rate, __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_click_through_rate.dashboard.lookml,
             __LINE_NUM: 527}], __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_click_through_rate.dashboard.lookml,
         __LINE_NUM: 510}]
-    y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
     y_axis_tick_density: default
     y_axis_tick_density_custom: 5
     show_x_axis_label: false
     show_x_axis_ticks: true
-    x_axis_scale: auto
     y_axis_scale_mode: linear
     x_axis_reversed: false
     y_axis_reversed: false
     plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    limit_displayed_rows: true
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '10'
+    legend_position: center
+    colors: ["#7869df", "#a6b7ff", "#6e98f9", "#8ac8ca", "#d06180", "#dc9d4f", "#4bb86a",
+      "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea9895", "#f1e582"]
+    series_types: {}
+    point_style: none
+    series_colors:
+      fact.average_click_rate: "#a31e67"
+      last_fact.average_click_rate: "#fccde5"
+    series_labels:
+      fact.average_click_rate: This Period
+      last_fact.average_click_rate: Prior Period
+    show_value_labels: true
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
     ordering: none
     show_null_labels: false
     show_totals_labels: false
@@ -392,6 +399,7 @@
     conditional_formatting_include_nulls: false
     hidden_fields: [campaign.name, fact.total_clicks, fact.total_impressions, last_fact.total_clicks,
       last_fact.total_impressions, fact.average_click_rate_period_percent_change]
+    listen: {}
     row: 19
     col: 8
     width: 8
@@ -413,26 +421,9 @@
     limit: 50
     column_limit: 50
     query_timezone: America/Los_Angeles
-    stacking: ''
-    colors: ["#7869df", "#a6b7ff", "#6e98f9", "#8ac8ca", "#d06180", "#dc9d4f", "#4bb86a",
-      "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea9895", "#f1e582"]
-    show_value_labels: true
-    label_density: 25
-    legend_position: center
     x_axis_gridlines: false
     y_axis_gridlines: false
     show_view_names: false
-    point_style: none
-    series_colors: {}
-    series_labels:
-      fact.average_click_rate: This Period
-      last_fact.average_click_rate: Prior Period
-    series_types: {}
-    limit_displayed_rows: true
-    limit_displayed_rows_values:
-      show_hide: show
-      first_last: first
-      num_rows: '10'
     y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: bottom,
         showLabels: true, showValues: false, tickDensity: default, tickDensityCustom: !!null '',
         type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: fact.average_click_rate,
@@ -441,18 +432,38 @@
               Fact, axisId: last_fact.average_click_rate, __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_click_through_rate.dashboard.lookml,
             __LINE_NUM: 527}], __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_click_through_rate.dashboard.lookml,
         __LINE_NUM: 510}]
-    y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
     y_axis_tick_density: default
     y_axis_tick_density_custom: 5
     show_x_axis_label: false
     show_x_axis_ticks: true
-    x_axis_scale: auto
     y_axis_scale_mode: linear
     x_axis_reversed: false
     y_axis_reversed: false
     plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    limit_displayed_rows: true
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '10'
+    legend_position: center
+    colors: ["#7869df", "#a6b7ff", "#6e98f9", "#8ac8ca", "#d06180", "#dc9d4f", "#4bb86a",
+      "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea9895", "#f1e582"]
+    series_types: {}
+    point_style: none
+    series_colors:
+      fact.average_click_rate: "#a31e67"
+      last_fact.average_click_rate: "#fccde5"
+    series_labels:
+      fact.average_click_rate: This Period
+      last_fact.average_click_rate: Prior Period
+    show_value_labels: true
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
     ordering: none
     show_null_labels: false
     show_totals_labels: false
@@ -468,6 +479,7 @@
     conditional_formatting_include_nulls: false
     hidden_fields: [campaign.name, fact.total_clicks, fact.total_impressions, last_fact.total_clicks,
       last_fact.total_impressions, fact.average_click_rate_period_percent_change]
+    listen: {}
     row: 19
     col: 16
     width: 8

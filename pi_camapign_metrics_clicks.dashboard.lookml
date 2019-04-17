@@ -294,7 +294,9 @@
       "#4bb86a", "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea989"]
     series_types: {}
     point_style: none
-    series_colors: {}
+    series_colors:
+      last_fact.total_clicks: "#fdbf6f"
+      fact.total_clicks: "#ff7f00"
     show_value_labels: true
     label_density: 25
     x_axis_scale: auto
@@ -313,6 +315,7 @@
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
     hidden_fields: [campaign.name, campaign.campaign_name, last_fact.total_clicks_period_delta]
+    listen: {}
     row: 19
     col: 0
     width: 8
@@ -362,7 +365,9 @@
       "#4bb86a", "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea989"]
     series_types: {}
     point_style: none
-    series_colors: {}
+    series_colors:
+      last_fact.total_clicks: "#fdbf6f"
+      fact.total_clicks: "#ff7f00"
     show_value_labels: true
     label_density: 25
     x_axis_scale: auto
@@ -381,6 +386,7 @@
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
     hidden_fields: [campaign.name, campaign.campaign_name, last_fact.total_clicks_period_delta]
+    listen: {}
     row: 19
     col: 8
     width: 8
@@ -430,7 +436,9 @@
       "#4bb86a", "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea989"]
     series_types: {}
     point_style: none
-    series_colors: {}
+    series_colors:
+      last_fact.total_clicks: "#fdbf6f"
+      fact.total_clicks: "#ff7f00"
     show_value_labels: true
     label_density: 25
     x_axis_scale: auto
@@ -449,6 +457,7 @@
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
     hidden_fields: [campaign.name, campaign.campaign_name, last_fact.total_clicks_period_delta]
+    listen: {}
     row: 19
     col: 16
     width: 8

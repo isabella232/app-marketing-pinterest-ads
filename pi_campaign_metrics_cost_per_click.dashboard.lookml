@@ -261,26 +261,9 @@
     sorts: [fact.average_cost_per_click_period_percent_change desc]
     limit: 500
     column_limit: 50
-    stacking: ''
-    colors: ["#a6b7ff", "#7869df", "#ea9895", "#d06180", "#6e98f9", "#8ac8ca", "#dc9d4f",
-      "#4bb86a", "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea989"]
-    show_value_labels: true
-    label_density: 25
-    legend_position: center
     x_axis_gridlines: false
     y_axis_gridlines: false
     show_view_names: false
-    point_style: none
-    series_colors: {}
-    series_labels:
-      last_fact.average_cost_per_click: Prior Period
-      fact.average_cost_per_click: This Period
-    series_types: {}
-    limit_displayed_rows: true
-    limit_displayed_rows_values:
-      show_hide: show
-      first_last: first
-      num_rows: '10'
     y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: bottom,
         showLabels: true, showValues: false, tickDensity: default, tickDensityCustom: !!null '',
         type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: fact.average_cost_per_click,
@@ -289,18 +272,38 @@
               Fact, axisId: last_fact.average_cost_per_click, __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_cost_per_click.dashboard.lookml,
             __LINE_NUM: 527}], __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_cost_per_click.dashboard.lookml,
         __LINE_NUM: 510}]
-    y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
     y_axis_tick_density: default
     y_axis_tick_density_custom: 5
     show_x_axis_label: false
     show_x_axis_ticks: true
-    x_axis_scale: auto
     y_axis_scale_mode: linear
     x_axis_reversed: false
     y_axis_reversed: false
     plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    limit_displayed_rows: true
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '10'
+    legend_position: center
+    colors: ["#a6b7ff", "#7869df", "#ea9895", "#d06180", "#6e98f9", "#8ac8ca", "#dc9d4f",
+      "#4bb86a", "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea989"]
+    series_types: {}
+    point_style: none
+    series_colors:
+      last_fact.average_cost_per_click: "#b2df8a"
+      fact.average_cost_per_click: "#33a02c"
+    series_labels:
+      last_fact.average_cost_per_click: Prior Period
+      fact.average_cost_per_click: This Period
+    show_value_labels: true
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
     ordering: none
     show_null_labels: false
     show_totals_labels: false
@@ -308,6 +311,7 @@
     totals_color: "#808080"
     hidden_fields: [campaign.name, fact.total_cost, fact.total_clicks, last_fact.total_cost,
       last_fact.total_clicks, fact.average_cost_per_click_period_percent_change]
+    listen: {}
     row: 19
     col: 0
     width: 12
@@ -328,26 +332,9 @@
     sorts: [fact.average_cost_per_click_period_percent_change desc]
     limit: 500
     column_limit: 50
-    stacking: ''
-    colors: ["#a6b7ff", "#7869df", "#ea9895", "#d06180", "#6e98f9", "#8ac8ca", "#dc9d4f",
-      "#4bb86a", "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea989"]
-    show_value_labels: true
-    label_density: 25
-    legend_position: center
     x_axis_gridlines: false
     y_axis_gridlines: false
     show_view_names: false
-    point_style: none
-    series_colors: {}
-    series_labels:
-      last_fact.average_cost_per_click: Prior Period
-      fact.average_cost_per_click: This Period
-    series_types: {}
-    limit_displayed_rows: true
-    limit_displayed_rows_values:
-      show_hide: show
-      first_last: first
-      num_rows: '10'
     y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: bottom,
         showLabels: true, showValues: false, tickDensity: default, tickDensityCustom: !!null '',
         type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: fact.average_cost_per_click,
@@ -356,18 +343,38 @@
               Fact, axisId: last_fact.average_cost_per_click, __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_cost_per_click.dashboard.lookml,
             __LINE_NUM: 527}], __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_cost_per_click.dashboard.lookml,
         __LINE_NUM: 510}]
-    y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
     y_axis_tick_density: default
     y_axis_tick_density_custom: 5
     show_x_axis_label: false
     show_x_axis_ticks: true
-    x_axis_scale: auto
     y_axis_scale_mode: linear
     x_axis_reversed: false
     y_axis_reversed: false
     plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    limit_displayed_rows: true
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '10'
+    legend_position: center
+    colors: ["#a6b7ff", "#7869df", "#ea9895", "#d06180", "#6e98f9", "#8ac8ca", "#dc9d4f",
+      "#4bb86a", "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea989"]
+    series_types: {}
+    point_style: none
+    series_colors:
+      last_fact.average_cost_per_click: "#b2df8a"
+      fact.average_cost_per_click: "#33a02c"
+    series_labels:
+      last_fact.average_cost_per_click: Prior Period
+      fact.average_cost_per_click: This Period
+    show_value_labels: true
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
     ordering: none
     show_null_labels: false
     show_totals_labels: false
@@ -375,6 +382,7 @@
     totals_color: "#808080"
     hidden_fields: [campaign.name, fact.total_cost, fact.total_clicks, last_fact.total_cost,
       last_fact.total_clicks, fact.average_cost_per_click_period_percent_change]
+    listen: {}
     row: 19
     col: 12
     width: 12
