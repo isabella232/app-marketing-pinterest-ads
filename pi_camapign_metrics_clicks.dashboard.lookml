@@ -249,3 +249,207 @@
     col: 12
     width: 12
     height: 8
+  - title: Ad Clicks Chnage
+    name: Ad Clicks Chnage
+    model: marketing_analytics
+    explore: pinterest_ad_date_fact
+    type: looker_bar
+    fields: [last_fact.total_clicks_period_delta, last_fact.total_clicks, fact.total_clicks,
+      ad.name]
+    filters:
+      fact.total_conversions_period_delta_abs: ">0"
+      fact.period: 28 day
+      fact.date_period_latest: 'Yes'
+    sorts: [last_fact.total_clicks_period_delta desc]
+    limit: 50
+    column_limit: 50
+    query_timezone: America/Los_Angeles
+    x_axis_gridlines: false
+    y_axis_gridlines: false
+    show_view_names: false
+    y_axes: [{label: '', orientation: bottom, series: [{axisId: last_fact.total_clicks,
+            id: last_fact.total_clicks, name: Ad Last Period}, {axisId: fact.total_clicks,
+            id: fact.total_clicks, name: Ad This Period}], showLabels: false, showValues: false,
+        unpinAxis: false, tickDensity: default, type: linear}]
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: false
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    limit_displayed_rows: true
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '10'
+    hide_legend: false
+    legend_position: center
+    colors: ["#a6b7ff", "#7869df", "#ea9895", "#d06180", "#6e98f9", "#8ac8ca", "#dc9d4f",
+      "#4bb86a", "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea989"]
+    series_types: {}
+    point_style: none
+    series_colors: {}
+    show_value_labels: true
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    show_row_numbers: true
+    truncate_column_names: false
+    hide_totals: false
+    hide_row_totals: false
+    table_theme: gray
+    enable_conditional_formatting: false
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    hidden_fields: [campaign.name, campaign.campaign_name, last_fact.total_clicks_period_delta]
+    row: 19
+    col: 0
+    width: 8
+    height: 7
+  - title: Landing Page Clicks Chnage
+    name: Landing Page Clicks Chnage
+    model: marketing_analytics
+    explore: pinterest_ad_date_fact
+    type: looker_bar
+    fields: [last_fact.total_clicks_period_delta, last_fact.total_clicks, fact.total_clicks,
+      ad.display_url]
+    filters:
+      fact.total_conversions_period_delta_abs: ">0"
+      fact.period: 28 day
+      fact.date_period_latest: 'Yes'
+    sorts: [last_fact.total_clicks_period_delta desc]
+    limit: 50
+    column_limit: 50
+    query_timezone: America/Los_Angeles
+    x_axis_gridlines: false
+    y_axis_gridlines: false
+    show_view_names: false
+    y_axes: [{label: '', orientation: bottom, series: [{axisId: last_fact.total_clicks,
+            id: last_fact.total_clicks, name: Ad Last Period}, {axisId: fact.total_clicks,
+            id: fact.total_clicks, name: Ad This Period}], showLabels: false, showValues: false,
+        unpinAxis: false, tickDensity: default, type: linear}]
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: false
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    limit_displayed_rows: true
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '10'
+    hide_legend: false
+    legend_position: center
+    colors: ["#a6b7ff", "#7869df", "#ea9895", "#d06180", "#6e98f9", "#8ac8ca", "#dc9d4f",
+      "#4bb86a", "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea989"]
+    series_types: {}
+    point_style: none
+    series_colors: {}
+    show_value_labels: true
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    show_row_numbers: true
+    truncate_column_names: false
+    hide_totals: false
+    hide_row_totals: false
+    table_theme: gray
+    enable_conditional_formatting: false
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    hidden_fields: [campaign.name, campaign.campaign_name, last_fact.total_clicks_period_delta]
+    row: 19
+    col: 8
+    width: 8
+    height: 7
+  - title: Ad Group Clicks Change
+    name: Ad Group Clicks Change
+    model: marketing_analytics
+    explore: pinterest_ad_group_date_fact
+    type: looker_bar
+    fields: [last_fact.total_clicks_period_delta, last_fact.total_clicks, fact.total_clicks,
+      ad_group.ad_group_name]
+    filters:
+      fact.total_conversions_period_delta_abs: ">0"
+      fact.period: 28 day
+      fact.date_period_latest: 'Yes'
+    sorts: [last_fact.total_clicks_period_delta desc]
+    limit: 50
+    column_limit: 50
+    query_timezone: America/Los_Angeles
+    x_axis_gridlines: false
+    y_axis_gridlines: false
+    show_view_names: false
+    y_axes: [{label: '', orientation: bottom, series: [{axisId: last_fact.total_clicks,
+            id: last_fact.total_clicks, name: Ad Last Period}, {axisId: fact.total_clicks,
+            id: fact.total_clicks, name: Ad This Period}], showLabels: false, showValues: false,
+        unpinAxis: false, tickDensity: default, type: linear}]
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: false
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    limit_displayed_rows: true
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '10'
+    hide_legend: false
+    legend_position: center
+    colors: ["#a6b7ff", "#7869df", "#ea9895", "#d06180", "#6e98f9", "#8ac8ca", "#dc9d4f",
+      "#4bb86a", "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea989"]
+    series_types: {}
+    point_style: none
+    series_colors: {}
+    show_value_labels: true
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    show_row_numbers: true
+    truncate_column_names: false
+    hide_totals: false
+    hide_row_totals: false
+    table_theme: gray
+    enable_conditional_formatting: false
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    hidden_fields: [campaign.name, campaign.campaign_name, last_fact.total_clicks_period_delta]
+    row: 19
+    col: 16
+    width: 8
+    height: 7

@@ -244,3 +244,138 @@
     col: 0
     width: 12
     height: 8
+  - title: Ad Group Cost Per Click Change
+    name: Ad Group Cost Per Click Change
+    model: marketing_analytics
+    explore: pinterest_ad_group_date_fact
+    type: looker_bar
+    fields: [ad_group.ad_group_name, last_fact.average_cost_per_click, fact.average_cost_per_click,
+      fact.total_cost, fact.total_clicks, last_fact.total_cost, last_fact.total_clicks,
+      fact.average_cost_per_click_period_percent_change]
+    filters:
+      fact.average_cost_per_click_period_percent_change: NOT NULL
+      fact.period: 28 day
+      fact.date_period_latest: 'Yes'
+      account.account_name: ''
+      ad_group.ad_group_name: ''
+    sorts: [fact.average_cost_per_click_period_percent_change desc]
+    limit: 500
+    column_limit: 50
+    stacking: ''
+    colors: ["#a6b7ff", "#7869df", "#ea9895", "#d06180", "#6e98f9", "#8ac8ca", "#dc9d4f",
+      "#4bb86a", "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea989"]
+    show_value_labels: true
+    label_density: 25
+    legend_position: center
+    x_axis_gridlines: false
+    y_axis_gridlines: false
+    show_view_names: false
+    point_style: none
+    series_colors: {}
+    series_labels:
+      last_fact.average_cost_per_click: Prior Period
+      fact.average_cost_per_click: This Period
+    series_types: {}
+    limit_displayed_rows: true
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '10'
+    y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: bottom,
+        showLabels: true, showValues: false, tickDensity: default, tickDensityCustom: !!null '',
+        type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: fact.average_cost_per_click,
+            name: Period Fact, axisId: fact.average_cost_per_click, __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_cost_per_click.dashboard.lookml,
+            __LINE_NUM: 522}, {id: last_fact.average_cost_per_click, name: Last Period
+              Fact, axisId: last_fact.average_cost_per_click, __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_cost_per_click.dashboard.lookml,
+            __LINE_NUM: 527}], __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_cost_per_click.dashboard.lookml,
+        __LINE_NUM: 510}]
+    y_axis_combined: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: false
+    show_x_axis_ticks: true
+    x_axis_scale: auto
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    hidden_fields: [campaign.name, fact.total_cost, fact.total_clicks, last_fact.total_cost,
+      last_fact.total_clicks, fact.average_cost_per_click_period_percent_change]
+    row: 19
+    col: 0
+    width: 12
+    height: 7
+  - title: Ad Cost Per Click Change
+    name: Ad Cost Per Click Change
+    model: marketing_analytics
+    explore: pinterest_ad_date_fact
+    type: looker_bar
+    fields: [last_fact.average_cost_per_click, fact.average_cost_per_click, fact.total_cost,
+      fact.total_clicks, last_fact.total_cost, last_fact.total_clicks, fact.average_cost_per_click_period_percent_change,
+      ad.name]
+    filters:
+      fact.average_cost_per_click_period_percent_change: NOT NULL
+      fact.period: 28 day
+      fact.date_period_latest: 'Yes'
+      account.account_name: ''
+    sorts: [fact.average_cost_per_click_period_percent_change desc]
+    limit: 500
+    column_limit: 50
+    stacking: ''
+    colors: ["#a6b7ff", "#7869df", "#ea9895", "#d06180", "#6e98f9", "#8ac8ca", "#dc9d4f",
+      "#4bb86a", "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea989"]
+    show_value_labels: true
+    label_density: 25
+    legend_position: center
+    x_axis_gridlines: false
+    y_axis_gridlines: false
+    show_view_names: false
+    point_style: none
+    series_colors: {}
+    series_labels:
+      last_fact.average_cost_per_click: Prior Period
+      fact.average_cost_per_click: This Period
+    series_types: {}
+    limit_displayed_rows: true
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '10'
+    y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: bottom,
+        showLabels: true, showValues: false, tickDensity: default, tickDensityCustom: !!null '',
+        type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: fact.average_cost_per_click,
+            name: Period Fact, axisId: fact.average_cost_per_click, __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_cost_per_click.dashboard.lookml,
+            __LINE_NUM: 522}, {id: last_fact.average_cost_per_click, name: Last Period
+              Fact, axisId: last_fact.average_cost_per_click, __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_cost_per_click.dashboard.lookml,
+            __LINE_NUM: 527}], __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_cost_per_click.dashboard.lookml,
+        __LINE_NUM: 510}]
+    y_axis_combined: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: false
+    show_x_axis_ticks: true
+    x_axis_scale: auto
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    hidden_fields: [campaign.name, fact.total_cost, fact.total_clicks, last_fact.total_cost,
+      last_fact.total_clicks, fact.average_cost_per_click_period_percent_change]
+    row: 19
+    col: 12
+    width: 12
+    height: 7

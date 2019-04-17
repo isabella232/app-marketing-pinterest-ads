@@ -248,3 +248,217 @@
     col: 0
     width: 12
     height: 8
+  - title: Ad Group Return On Ad Spend Change
+    name: Ad Group Return On Ad Spend Change
+    model: marketing_analytics
+    explore: pinterest_ad_group_date_fact
+    type: looker_bar
+    fields: [ad_group.ad_group_name, last_fact.average_value_per_cost, fact.average_value_per_cost,
+      fact.average_value_per_cost_period_percent_change_abs]
+    filters:
+      fact.total_conversions_period_delta_abs: ">0"
+      fact.period: 28 day
+      fact.date_period_latest: 'Yes'
+      account.account_name: ''
+      ad_group.ad_group_name: ''
+    sorts: [fact.average_value_per_cost_period_percent_change_abs desc]
+    limit: 50
+    column_limit: 50
+    query_timezone: America/Los_Angeles
+    stacking: ''
+    colors: ["#a6b7ff", "#7869df", "#ea9895", "#d06180", "#6e98f9", "#8ac8ca", "#dc9d4f",
+      "#4bb86a", "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea989"]
+    show_value_labels: true
+    label_density: 25
+    legend_position: center
+    x_axis_gridlines: false
+    y_axis_gridlines: false
+    show_view_names: false
+    point_style: none
+    series_colors: {}
+    series_types: {}
+    limit_displayed_rows: true
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '10'
+    y_axes: [{label: '', orientation: bottom, series: [{id: last_fact.average_value_per_cost,
+            name: Ad Group Last Period, axisId: last_fact.average_value_per_cost,
+            __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_roas.dashboard.lookml,
+            __LINE_NUM: 696}, {id: fact.average_value_per_cost, name: Ad Group This
+              Period, axisId: fact.average_value_per_cost, __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_roas.dashboard.lookml,
+            __LINE_NUM: 699}], showLabels: false, showValues: false, unpinAxis: false,
+        tickDensity: default, type: linear, __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_roas.dashboard.lookml,
+        __LINE_NUM: 693}]
+    y_axis_combined: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: false
+    show_x_axis_ticks: true
+    x_axis_scale: auto
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    show_row_numbers: true
+    truncate_column_names: false
+    hide_totals: false
+    hide_row_totals: false
+    table_theme: gray
+    enable_conditional_formatting: false
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    hidden_fields: [campaign.name, campaign.campaign_name, fact.average_value_per_cost_period_percent_change_abs]
+    row: 19
+    col: 0
+    width: 8
+    height: 7
+  - title: Ad Return on Ad Spend Change
+    name: Ad Return on Ad Spend Change
+    model: marketing_analytics
+    explore: pinterest_ad_date_fact
+    type: looker_bar
+    fields: [last_fact.average_value_per_cost, fact.average_value_per_cost, fact.average_value_per_cost_period_percent_change_abs,
+      ad.name]
+    filters:
+      fact.total_conversions_period_delta_abs: ">0"
+      fact.period: 28 day
+      fact.date_period_latest: 'Yes'
+      account.account_name: ''
+    sorts: [fact.average_value_per_cost_period_percent_change_abs desc]
+    limit: 50
+    column_limit: 50
+    query_timezone: America/Los_Angeles
+    stacking: ''
+    colors: ["#a6b7ff", "#7869df", "#ea9895", "#d06180", "#6e98f9", "#8ac8ca", "#dc9d4f",
+      "#4bb86a", "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea989"]
+    show_value_labels: true
+    label_density: 25
+    legend_position: center
+    x_axis_gridlines: false
+    y_axis_gridlines: false
+    show_view_names: false
+    point_style: none
+    series_colors: {}
+    series_types: {}
+    limit_displayed_rows: true
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '10'
+    y_axes: [{label: '', orientation: bottom, series: [{id: last_fact.average_value_per_cost,
+            name: Ad Group Last Period, axisId: last_fact.average_value_per_cost,
+            __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_roas.dashboard.lookml,
+            __LINE_NUM: 696}, {id: fact.average_value_per_cost, name: Ad Group This
+              Period, axisId: fact.average_value_per_cost, __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_roas.dashboard.lookml,
+            __LINE_NUM: 699}], showLabels: false, showValues: false, unpinAxis: false,
+        tickDensity: default, type: linear, __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_roas.dashboard.lookml,
+        __LINE_NUM: 693}]
+    y_axis_combined: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: false
+    show_x_axis_ticks: true
+    x_axis_scale: auto
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    show_row_numbers: true
+    truncate_column_names: false
+    hide_totals: false
+    hide_row_totals: false
+    table_theme: gray
+    enable_conditional_formatting: false
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    hidden_fields: [campaign.name, campaign.campaign_name, fact.average_value_per_cost_period_percent_change_abs]
+    row: 19
+    col: 8
+    width: 8
+    height: 7
+  - title: Landing Page Return on Ad Spend Change
+    name: Landing Page Return on Ad Spend Change
+    model: marketing_analytics
+    explore: pinterest_ad_date_fact
+    type: looker_bar
+    fields: [last_fact.average_value_per_cost, fact.average_value_per_cost, fact.average_value_per_cost_period_percent_change_abs,
+      ad.display_url]
+    filters:
+      fact.total_conversions_period_delta_abs: ">0"
+      fact.period: 28 day
+      fact.date_period_latest: 'Yes'
+      account.account_name: ''
+    sorts: [fact.average_value_per_cost_period_percent_change_abs desc]
+    limit: 50
+    column_limit: 50
+    query_timezone: America/Los_Angeles
+    stacking: ''
+    colors: ["#a6b7ff", "#7869df", "#ea9895", "#d06180", "#6e98f9", "#8ac8ca", "#dc9d4f",
+      "#4bb86a", "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea989"]
+    show_value_labels: true
+    label_density: 25
+    legend_position: center
+    x_axis_gridlines: false
+    y_axis_gridlines: false
+    show_view_names: false
+    point_style: none
+    series_colors: {}
+    series_types: {}
+    limit_displayed_rows: true
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '10'
+    y_axes: [{label: '', orientation: bottom, series: [{id: last_fact.average_value_per_cost,
+            name: Ad Group Last Period, axisId: last_fact.average_value_per_cost,
+            __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_roas.dashboard.lookml,
+            __LINE_NUM: 696}, {id: fact.average_value_per_cost, name: Ad Group This
+              Period, axisId: fact.average_value_per_cost, __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_roas.dashboard.lookml,
+            __LINE_NUM: 699}], showLabels: false, showValues: false, unpinAxis: false,
+        tickDensity: default, type: linear, __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_roas.dashboard.lookml,
+        __LINE_NUM: 693}]
+    y_axis_combined: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: false
+    show_x_axis_ticks: true
+    x_axis_scale: auto
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    show_row_numbers: true
+    truncate_column_names: false
+    hide_totals: false
+    hide_row_totals: false
+    table_theme: gray
+    enable_conditional_formatting: false
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    hidden_fields: [campaign.name, campaign.campaign_name, fact.average_value_per_cost_period_percent_change_abs]
+    row: 19
+    col: 16
+    width: 8
+    height: 7

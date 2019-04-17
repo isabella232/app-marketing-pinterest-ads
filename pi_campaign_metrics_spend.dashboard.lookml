@@ -246,3 +246,135 @@
     col: 0
     width: 12
     height: 8
+  - title: Ad Spend Change
+    name: Ad Spend Change
+    model: marketing_analytics
+    explore: pinterest_ad_date_fact
+    type: looker_bar
+    fields: [last_fact.total_cost, fact.total_cost, fact.total_cost_period_delta,
+      ad.name]
+    filters:
+      fact.total_cost_period_delta_abs: ">0"
+      fact.period: 28 day
+      fact.date_period_latest: 'Yes'
+      account.account_name: ''
+    sorts: [fact.total_cost_period_delta_abs desc]
+    limit: 50
+    column_limit: 50
+    query_timezone: America/Los_Angeles
+    stacking: ''
+    show_value_labels: true
+    label_density: 25
+    legend_position: center
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_view_names: false
+    limit_displayed_rows: true
+    y_axis_combined: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: false
+    show_x_axis_ticks: true
+    x_axis_scale: auto
+    y_axis_scale_mode: linear
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    show_row_numbers: true
+    truncate_column_names: false
+    hide_totals: false
+    hide_row_totals: false
+    table_theme: gray
+    enable_conditional_formatting: false
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    series_types: {}
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '7'
+    hidden_fields: [campaign.name, fact.total_cost_period_delta, campaign.campaign_name]
+    y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: bottom,
+        showLabels: false, showValues: false, tickDensity: default, tickDensityCustom: 5,
+        type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: fact.total_cost,
+            name: Cost, axisId: fact.total_cost, __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_spend.dashboard.lookml,
+            __LINE_NUM: 452}], __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_spend.dashboard.lookml,
+        __LINE_NUM: 440}]
+    hide_legend: false
+    colors: ["#a6b7ff", "#7869df", "#ea9895", "#d06180", "#6e98f9", "#8ac8ca", "#dc9d4f",
+      "#4bb86a", "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea989"]
+    series_colors: {}
+    row: 19
+    col: 0
+    width: 12
+    height: 8
+  - title: Landing Page Spend Change
+    name: Landing Page Spend Change
+    model: marketing_analytics
+    explore: pinterest_ad_date_fact
+    type: looker_bar
+    fields: [last_fact.total_cost, fact.total_cost, fact.total_cost_period_delta,
+      ad.display_url]
+    filters:
+      fact.total_cost_period_delta_abs: ">0"
+      fact.period: 28 day
+      fact.date_period_latest: 'Yes'
+      account.account_name: ''
+    sorts: [fact.total_cost_period_delta_abs desc]
+    limit: 50
+    column_limit: 50
+    query_timezone: America/Los_Angeles
+    stacking: ''
+    show_value_labels: true
+    label_density: 25
+    legend_position: center
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_view_names: false
+    limit_displayed_rows: true
+    y_axis_combined: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: false
+    show_x_axis_ticks: true
+    x_axis_scale: auto
+    y_axis_scale_mode: linear
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    show_row_numbers: true
+    truncate_column_names: false
+    hide_totals: false
+    hide_row_totals: false
+    table_theme: gray
+    enable_conditional_formatting: false
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    series_types: {}
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '7'
+    hidden_fields: [campaign.name, fact.total_cost_period_delta, campaign.campaign_name]
+    y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: bottom,
+        showLabels: false, showValues: false, tickDensity: default, tickDensityCustom: 5,
+        type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: fact.total_cost,
+            name: Cost, axisId: fact.total_cost, __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_spend.dashboard.lookml,
+            __LINE_NUM: 452}], __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_spend.dashboard.lookml,
+        __LINE_NUM: 440}]
+    hide_legend: false
+    colors: ["#a6b7ff", "#7869df", "#ea9895", "#d06180", "#6e98f9", "#8ac8ca", "#dc9d4f",
+      "#4bb86a", "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea989"]
+    series_colors: {}
+    row: 19
+    col: 12
+    width: 12
+    height: 8

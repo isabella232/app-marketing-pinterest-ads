@@ -238,3 +238,151 @@
     col: 12
     width: 12
     height: 8
+  - title: Ad Group Conversion Rate Change
+    name: Ad Group Conversion Rate Change
+    model: marketing_analytics
+    explore: pinterest_ad_group_date_fact
+    type: looker_bar
+    fields: [ad_group.ad_group_name, last_fact.average_conversion_rate, fact.average_conversion_rate,
+      fact.total_conversions, fact.total_clicks, last_fact.total_conversions, last_fact.total_clicks,
+      fact.average_conversion_rate_period_percent_change]
+    filters:
+      fact.average_conversion_rate_period_percent_change: NOT NULL
+      fact.period: 28 day
+      fact.date_period_latest: 'Yes'
+    sorts: [fact.average_conversion_rate_period_percent_change desc]
+    limit: 50
+    column_limit: 50
+    query_timezone: America/Los_Angeles
+    stacking: ''
+    colors: ["#a6b7ff", "#7869df", "#6e98f9", "#8ac8ca", "#d06180", "#dc9d4f", "#4bb86a",
+      "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea9895", "#f1e582"]
+    show_value_labels: true
+    label_density: 25
+    legend_position: center
+    x_axis_gridlines: false
+    y_axis_gridlines: false
+    show_view_names: false
+    point_style: none
+    series_colors: {}
+    series_labels:
+      fact.average_conversion_rate: This Period
+      last_fact.average_conversion_rate: Prior Period
+    series_types: {}
+    limit_displayed_rows: true
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '10'
+    y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: bottom,
+        showLabels: true, showValues: false, tickDensity: default, tickDensityCustom: !!null '',
+        type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: fact.average_conversion_rate,
+            name: Period Fact, axisId: fact.average_conversion_rate, __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_conversion_rate.dashboard.lookml,
+            __LINE_NUM: 522}, {id: last_fact.average_conversion_rate, name: Last Period
+              Fact, axisId: last_fact.average_conversion_rate, __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_conversion_rate.dashboard.lookml,
+            __LINE_NUM: 527}], __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_conversion_rate.dashboard.lookml,
+        __LINE_NUM: 510}]
+    y_axis_combined: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: false
+    show_x_axis_ticks: true
+    x_axis_scale: auto
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    show_row_numbers: true
+    truncate_column_names: false
+    hide_totals: false
+    hide_row_totals: false
+    table_theme: editable
+    enable_conditional_formatting: false
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    hidden_fields: [campaign.name, fact.total_conversions, fact.total_clicks, last_fact.total_conversions,
+      last_fact.total_clicks, fact.average_conversion_rate_period_percent_change]
+    row: 19
+    col: 0
+    width: 12
+    height: 8
+  - title: Ad Conversion Rate Change
+    name: Ad Conversion Rate Change
+    model: marketing_analytics
+    explore: pinterest_ad_date_fact
+    type: looker_bar
+    fields: [last_fact.average_conversion_rate, fact.average_conversion_rate, fact.average_conversion_rate_period_percent_change,
+      ad.name]
+    filters:
+      fact.average_conversion_rate_period_percent_change: NOT NULL
+      fact.period: 28 day
+      fact.date_period_latest: 'Yes'
+    sorts: [fact.average_conversion_rate_period_percent_change desc]
+    limit: 50
+    column_limit: 50
+    query_timezone: America/Los_Angeles
+    stacking: ''
+    colors: ["#a6b7ff", "#7869df", "#6e98f9", "#8ac8ca", "#d06180", "#dc9d4f", "#4bb86a",
+      "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea9895", "#f1e582"]
+    show_value_labels: true
+    label_density: 25
+    legend_position: center
+    x_axis_gridlines: false
+    y_axis_gridlines: false
+    show_view_names: false
+    point_style: none
+    series_colors: {}
+    series_labels:
+      fact.average_conversion_rate: This Period
+      last_fact.average_conversion_rate: Prior Period
+    series_types: {}
+    limit_displayed_rows: true
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '10'
+    y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: bottom,
+        showLabels: true, showValues: false, tickDensity: default, tickDensityCustom: !!null '',
+        type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: fact.average_conversion_rate,
+            name: Period Fact, axisId: fact.average_conversion_rate, __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_conversion_rate.dashboard.lookml,
+            __LINE_NUM: 522}, {id: last_fact.average_conversion_rate, name: Last Period
+              Fact, axisId: last_fact.average_conversion_rate, __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_conversion_rate.dashboard.lookml,
+            __LINE_NUM: 527}], __FILE: app-marketing-config-5f71074d49e24011ceee3a8ee7cf1e94-a86f3012e721f02f3d522404ff42fac45a79a9dc/bi_campaign_metrics_conversion_rate.dashboard.lookml,
+        __LINE_NUM: 510}]
+    y_axis_combined: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: false
+    show_x_axis_ticks: true
+    x_axis_scale: auto
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    show_row_numbers: true
+    truncate_column_names: false
+    hide_totals: false
+    hide_row_totals: false
+    table_theme: editable
+    enable_conditional_formatting: false
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    hidden_fields: [campaign.name, fact.average_conversion_rate_period_percent_change]
+    row: 19
+    col: 12
+    width: 12
+    height: 8
