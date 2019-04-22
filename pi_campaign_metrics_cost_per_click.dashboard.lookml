@@ -84,7 +84,9 @@
     comparison_reverse_colors: true
     show_comparison_label: false
     hidden_fields: [total_conversion_change]
-    listen: {}
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
     row: 0
     col: 0
     width: 24
@@ -163,6 +165,9 @@
     comparison_reverse_colors: true
     show_comparison_label: false
     hidden_fields: [total_conversion_change]
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
     row: 11
     col: 12
     width: 12
@@ -240,6 +245,9 @@
     comparison_reverse_colors: true
     show_comparison_label: false
     hidden_fields: [total_conversion_change]
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
     row: 11
     col: 0
     width: 12
@@ -311,7 +319,9 @@
     totals_color: "#808080"
     hidden_fields: [campaign.name, fact.total_cost, fact.total_clicks, last_fact.total_cost,
       last_fact.total_clicks, fact.average_cost_per_click_period_percent_change]
-    listen: {}
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
     row: 19
     col: 0
     width: 12
@@ -382,7 +392,9 @@
     totals_color: "#808080"
     hidden_fields: [campaign.name, fact.total_cost, fact.total_clicks, last_fact.total_cost,
       last_fact.total_clicks, fact.average_cost_per_click_period_percent_change]
-    listen: {}
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
     row: 19
     col: 12
     width: 12

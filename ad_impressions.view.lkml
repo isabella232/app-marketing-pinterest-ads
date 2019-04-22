@@ -51,6 +51,7 @@ explore: pinterest_ad_impressions_keyword_template {
   extends: [pinterest_ad_impressions_keyword_adapter]
   from: pinterest_ad_impressions_keyword
   view_name: fact
+  hidden: yes
   group_label: "pinterest Ads"
   label: "pinterest Ads Impressions by Keyword"
   view_label: "Impressions by Keyword"

@@ -84,7 +84,9 @@
     comparison_reverse_colors: true
     show_comparison_label: false
     hidden_fields: [total_conversion_change]
-    listen: {}
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
     row: 0
     col: 0
     width: 24
@@ -164,7 +166,9 @@
     comparison_reverse_colors: true
     show_comparison_label: false
     hidden_fields: [total_conversion_change]
-    listen: {}
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
     row: 11
     col: 12
     width: 12
@@ -243,7 +247,9 @@
     comparison_reverse_colors: true
     show_comparison_label: false
     hidden_fields: [total_conversion_change]
-    listen: {}
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
     row: 11
     col: 0
     width: 12
@@ -317,7 +323,9 @@
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
     hidden_fields: [campaign.name, campaign.campaign_name, fact.total_impressions_period_delta]
-    listen: {}
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
     row: 19
     col: 0
     width: 8
@@ -391,7 +399,9 @@
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
     hidden_fields: [campaign.name, campaign.campaign_name, fact.total_impressions_period_delta]
-    listen: {}
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
     row: 19
     col: 8
     width: 8
@@ -465,7 +475,9 @@
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
     hidden_fields: [campaign.name, campaign.campaign_name, fact.total_impressions_period_delta]
-    listen: {}
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
     row: 19
     col: 16
     width: 8

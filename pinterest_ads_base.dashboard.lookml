@@ -29,29 +29,3 @@
       explore: pinterest_ads_ad_impressions
       listens_to_filters: []
       field: fact.date_period_latest
-    - name: Account
-      title: Account
-      type: field_filter
-      default_value: ''
-      allow_multiple_values: true
-      required: false
-      model: marketing_analytics
-      explore: pinterest_ads_ad_impressions
-      listens_to_filters:
-      - Period
-      - Period Latest
-      field: fact.account_name
-    - name: Ad Group
-      title: Ad Group
-      type: field_filter
-      default_value: ''
-      allow_multiple_values: true
-      required: false
-      model: marketing_analytics
-      explore: pinterest_ads_ad_impressions
-      listens_to_filters:
-      - Period
-      - Period Latest
-      - Campaign
-      - Account
-      field: fact.ad_group_name
