@@ -124,8 +124,6 @@ view: pinterest_period_fact {
   sql_table_name:
   {% if (fact.ad_id._in_query) %}
     ${pinterest_ad_date_fact.SQL_TABLE_NAME}
-  {% elsif (fact.keyword_id._in_query) %}
-    ${pinterest_keyword_date_fact.SQL_TABLE_NAME}
   {% elsif (fact.ad_group_id._in_query) %}
     ${pinterest_ad_group_date_fact.SQL_TABLE_NAME}
   {% elsif (fact.campaign_id._in_query) %}
