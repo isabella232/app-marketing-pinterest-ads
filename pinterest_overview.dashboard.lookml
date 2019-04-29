@@ -285,7 +285,9 @@
     comparison_reverse_colors: true
     show_comparison_label: false
     hidden_fields: [total_conversion_change]
-    listen: {}
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
     row: 3
     col: 9
     width: 15
@@ -353,7 +355,9 @@
     comparison_reverse_colors: true
     show_comparison_label: false
     hidden_fields: [total_conversion_change]
-    listen: {}
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
     row: 3
     col: 0
     width: 9
@@ -429,7 +433,9 @@
     comparison_reverse_colors: true
     show_comparison_label: false
     hidden_fields: [total_conversion_change]
-    listen: {}
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
     row: 13
     col: 0
     width: 9
@@ -483,7 +489,9 @@
       fact.cost_per_click, last_fact.average_conversion_rate, total_conversion_change,
       fact.total_cost, cost_change, cost_per_conversion_percent_change, cost_per_click_percent_change,
       conversion_rate_percent_change]
-    listen: {}
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
     row: 13
     col: 9
     width: 7
@@ -537,7 +545,9 @@
       total_conversion_change, fact.total_cost, cost_change, cost_per_conversion_percent_change,
       conversion_rate_percent_change, last_fact.cost_per_click, click_through_rate_percent_change,
       fact.average_click_rate]
-    listen: {}
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
     row: 16
     col: 9
     width: 7
@@ -620,7 +630,9 @@
     comparison_reverse_colors: true
     show_comparison_label: false
     hidden_fields: [total_conversion_change]
-    listen: {}
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
     row: 13
     col: 16
     width: 8
