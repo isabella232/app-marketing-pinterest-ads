@@ -532,7 +532,6 @@
     type: looker_line
     fields: [fact.date_date, fact.cost_per_click, fact.average_click_rate,
       fact.total_clicks]
-    fill_fields: [fact.date_date]
     sorts: [fact.date_date desc]
     limit: 500
     query_timezone: America/New_York
