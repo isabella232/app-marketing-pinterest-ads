@@ -1,4 +1,5 @@
 - dashboard: pinterest_overview
+  title: Pinterest Overview
   extends: pinterest_ads_base
   elements:
   - title: Spend
@@ -6,10 +7,10 @@
     model: marketing_analytics
     explore: pinterest_ad_group_date_fact
     type: single_value
-    fields: [fact.total_cost, last_fact.total_cost, fact.total_conversions,
-      last_fact.total_conversions, fact.average_cost_per_conversion, last_fact.average_cost_per_conversion,
-      fact.average_conversion_rate, last_fact.average_conversion_rate, fact.average_click_rate,
-      last_fact.average_click_rate, fact.cost_per_click, last_fact.cost_per_click]
+    fields: [fact.total_cost, last_fact.total_cost, fact.total_conversions, last_fact.total_conversions,
+      fact.average_cost_per_conversion, last_fact.average_cost_per_conversion, fact.average_conversion_rate,
+      last_fact.average_conversion_rate, fact.average_click_rate, last_fact.average_click_rate,
+      fact.cost_per_click, last_fact.cost_per_click]
     sorts: [cost_per_conversion_percent_change]
     limit: 500
     dynamic_fields: [{table_calculation: cost_change, label: Cost Change, expression: "${fact.total_cost}\
@@ -43,9 +44,11 @@
     show_comparison_label: false
     hidden_fields: [last_fact.total_cost, fact.total_conversions, last_fact.total_conversions,
       fact.average_click_rate, last_fact.average_click_rate, fact.average_conversion_rate,
-      fact.average_cost_per_conversion, last_fact.average_cost_per_conversion,
-      last_fact.cost_per_click, fact.cost_per_click, last_fact.average_conversion_rate,
-      total_conversion_change]
+      fact.average_cost_per_conversion, last_fact.average_cost_per_conversion, last_fact.cost_per_click,
+      fact.cost_per_click, last_fact.average_conversion_rate, total_conversion_change]
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
     row: 0
     col: 0
     width: 9
@@ -55,10 +58,10 @@
     model: marketing_analytics
     explore: pinterest_ad_group_date_fact
     type: single_value
-    fields: [fact.total_cost, last_fact.total_cost, fact.total_conversions,
-      last_fact.total_conversions, fact.average_cost_per_conversion, last_fact.average_cost_per_conversion,
-      fact.average_conversion_rate, last_fact.average_conversion_rate, fact.average_click_rate,
-      last_fact.average_click_rate, fact.cost_per_click, last_fact.cost_per_click]
+    fields: [fact.total_cost, last_fact.total_cost, fact.total_conversions, last_fact.total_conversions,
+      fact.average_cost_per_conversion, last_fact.average_cost_per_conversion, fact.average_conversion_rate,
+      last_fact.average_conversion_rate, fact.average_click_rate, last_fact.average_click_rate,
+      fact.cost_per_click, last_fact.cost_per_click]
     sorts: [cost_per_conversion_percent_change]
     limit: 500
     dynamic_fields: [{table_calculation: cost_change, label: Cost Change, expression: "${fact.total_cost}\
@@ -92,9 +95,11 @@
     show_comparison_label: false
     hidden_fields: [last_fact.total_cost, last_fact.total_conversions, fact.average_click_rate,
       last_fact.average_click_rate, fact.average_conversion_rate, fact.average_cost_per_conversion,
-      last_fact.average_cost_per_conversion, last_fact.cost_per_click,
-      fact.cost_per_click, last_fact.average_conversion_rate, fact.total_cost,
-      cost_change]
+      last_fact.average_cost_per_conversion, last_fact.cost_per_click, fact.cost_per_click,
+      last_fact.average_conversion_rate, fact.total_cost, cost_change]
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
     row: 0
     col: 9
     width: 5
@@ -104,10 +109,10 @@
     model: marketing_analytics
     explore: pinterest_ad_group_date_fact
     type: single_value
-    fields: [fact.total_cost, last_fact.total_cost, fact.total_conversions,
-      last_fact.total_conversions, fact.average_cost_per_conversion, last_fact.average_cost_per_conversion,
-      fact.average_conversion_rate, last_fact.average_conversion_rate, fact.average_click_rate,
-      last_fact.average_click_rate, fact.cost_per_click, last_fact.cost_per_click]
+    fields: [fact.total_cost, last_fact.total_cost, fact.total_conversions, last_fact.total_conversions,
+      fact.average_cost_per_conversion, last_fact.average_cost_per_conversion, fact.average_conversion_rate,
+      last_fact.average_conversion_rate, fact.average_click_rate, last_fact.average_click_rate,
+      fact.cost_per_click, last_fact.cost_per_click]
     sorts: [cost_per_conversion_percent_change]
     limit: 500
     dynamic_fields: [{table_calculation: cost_change, label: Cost Change, expression: "${fact.total_cost}\
@@ -144,6 +149,9 @@
       last_fact.cost_per_click, fact.cost_per_click, last_fact.average_conversion_rate,
       fact.total_cost, cost_change, fact.total_conversions, total_conversion_change,
       cost_per_click_percent_change, conversion_rate_percent_change, click_through_rate_percent_change]
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
     row: 0
     col: 14
     width: 5
@@ -153,10 +161,10 @@
     model: marketing_analytics
     explore: pinterest_ad_group_date_fact
     type: single_value
-    fields: [fact.total_cost, last_fact.total_cost, fact.total_conversions,
-      last_fact.total_conversions, fact.average_cost_per_conversion, last_fact.average_cost_per_conversion,
-      fact.average_conversion_rate, last_fact.average_conversion_rate, fact.average_click_rate,
-      last_fact.average_click_rate, fact.cost_per_click, last_fact.cost_per_click]
+    fields: [fact.total_cost, last_fact.total_cost, fact.total_conversions, last_fact.total_conversions,
+      fact.average_cost_per_conversion, last_fact.average_cost_per_conversion, fact.average_conversion_rate,
+      last_fact.average_conversion_rate, fact.average_click_rate, last_fact.average_click_rate,
+      fact.cost_per_click, last_fact.cost_per_click]
     sorts: [cost_per_conversion_percent_change]
     limit: 500
     dynamic_fields: [{table_calculation: cost_change, label: Cost Change, expression: "${fact.total_cost}\
@@ -189,11 +197,13 @@
     comparison_reverse_colors: false
     show_comparison_label: false
     hidden_fields: [last_fact.total_cost, last_fact.total_conversions, fact.average_click_rate,
-      last_fact.average_click_rate, last_fact.average_cost_per_conversion,
-      last_fact.cost_per_click, fact.cost_per_click, last_fact.average_conversion_rate,
-      fact.total_cost, cost_change, fact.total_conversions, total_conversion_change,
-      cost_per_click_percent_change, click_through_rate_percent_change, cost_per_conversion_percent_change,
-      fact.average_cost_per_conversion]
+      last_fact.average_click_rate, last_fact.average_cost_per_conversion, last_fact.cost_per_click,
+      fact.cost_per_click, last_fact.average_conversion_rate, fact.total_cost, cost_change,
+      fact.total_conversions, total_conversion_change, cost_per_click_percent_change,
+      click_through_rate_percent_change, cost_per_conversion_percent_change, fact.average_cost_per_conversion]
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
     row: 0
     col: 19
     width: 5
@@ -214,19 +224,24 @@
       palette_id: fuchsia_to_green
       options:
         steps: 5
+        __FILE: app-marketing-pinterest-ads/pinterest_overview.dashboard.lookml
+        __LINE_NUM: 216
     x_axis_gridlines: false
     y_axis_gridlines: true
     show_view_names: false
     y_axes: [{label: '', orientation: left, series: [{axisId: fact.average_cost_per_conversion,
-            id: fact.average_cost_per_conversion, name: Cost per Conversion.}],
-        showLabels: true, showValues: true, unpinAxis: false, tickDensity: default,
-        tickDensityCustom: 5, type: linear}, {label: !!null '', orientation: left,
-        series: [{axisId: fact.average_conversion_rate, id: fact.average_conversion_rate,
-            name: Conversion Rate}], showLabels: true, showValues: true, unpinAxis: false,
-        tickDensity: default, tickDensityCustom: 5, type: linear}, {label: !!null '',
-        orientation: right, series: [{axisId: fact.total_conversions, id: fact.total_conversions,
-            name: Conversions}], showLabels: true, showValues: true, unpinAxis: false,
-        tickDensity: default, tickDensityCustom: 5, type: linear}]
+            id: fact.average_cost_per_conversion, name: Cost per Conversion., __FILE: app-marketing-pinterest-ads/pinterest_overview.dashboard.lookml,
+            __LINE_NUM: 220}], showLabels: true, showValues: true, unpinAxis: false,
+        tickDensity: default, tickDensityCustom: 5, type: linear, __FILE: app-marketing-pinterest-ads/pinterest_overview.dashboard.lookml,
+        __LINE_NUM: 220}, {label: !!null '', orientation: left, series: [{axisId: fact.average_conversion_rate,
+            id: fact.average_conversion_rate, name: Conversion Rate, __FILE: app-marketing-pinterest-ads/pinterest_overview.dashboard.lookml,
+            __LINE_NUM: 224}], showLabels: true, showValues: true, unpinAxis: false,
+        tickDensity: default, tickDensityCustom: 5, type: linear, __FILE: app-marketing-pinterest-ads/pinterest_overview.dashboard.lookml,
+        __LINE_NUM: 223}, {label: !!null '', orientation: right, series: [{axisId: fact.total_conversions,
+            id: fact.total_conversions, name: Conversions, __FILE: app-marketing-pinterest-ads/pinterest_overview.dashboard.lookml,
+            __LINE_NUM: 227}], showLabels: true, showValues: true, unpinAxis: false,
+        tickDensity: default, tickDensityCustom: 5, type: linear, __FILE: app-marketing-pinterest-ads/pinterest_overview.dashboard.lookml,
+        __LINE_NUM: 226}]
     show_y_axis_labels: true
     show_y_axis_ticks: true
     y_axis_tick_density: default
@@ -293,6 +308,8 @@
       palette_id: fuchsia_to_green
       options:
         steps: 5
+        __FILE: app-marketing-pinterest-ads/pinterest_overview.dashboard.lookml
+        __LINE_NUM: 295
     show_value_labels: false
     label_density: 25
     legend_position: center
@@ -303,11 +320,7 @@
     series_colors:
       fact.cumulative_spend: "#4bb86a"
       last_fact.cumulative_spend: "#8fe4a7"
-      fact.cumulative_spend: "#4bb86a"
-      last_fact.cumulative_spend: "#8fe4a7"
     series_labels:
-      fact.cumulative_spend: This Period
-      last_fact.cumulative_spend: Prior Period
       fact.cumulative_spend: This Period
       last_fact.cumulative_spend: Last Period
     series_types: {}
@@ -360,6 +373,8 @@
       palette_id: mixed_pastels
       options:
         steps: 5
+        __FILE: app-marketing-pinterest-ads/pinterest_overview.dashboard.lookml
+        __LINE_NUM: 362
     show_value_labels: false
     label_density: 25
     legend_position: center
@@ -379,11 +394,15 @@
     series_types: {}
     limit_displayed_rows: false
     y_axes: [{label: '', orientation: left, series: [{id: fact.total_impressions,
-            name: Ad Group This Period Impressions, axisId: fact.total_impressions},
-          {id: fact.total_clicks, name: Ad Group This Period Clicks, axisId: fact.total_clicks},
-          {id: fact.total_conversions, name: Ad Group This Period Conversions, axisId: fact.total_conversions}],
-        showLabels: true, showValues: true, unpinAxis: false, tickDensity: default,
-        tickDensityCustom: 5, type: log}]
+            name: Ad Group This Period Impressions, axisId: fact.total_impressions,
+            __FILE: app-marketing-pinterest-ads/pinterest_overview.dashboard.lookml,
+            __LINE_NUM: 381}, {id: fact.total_clicks, name: Ad Group This Period Clicks,
+            axisId: fact.total_clicks, __FILE: app-marketing-pinterest-ads/pinterest_overview.dashboard.lookml,
+            __LINE_NUM: 383}, {id: fact.total_conversions, name: Ad Group This Period
+              Conversions, axisId: fact.total_conversions, __FILE: app-marketing-pinterest-ads/pinterest_overview.dashboard.lookml,
+            __LINE_NUM: 384}], showLabels: true, showValues: true, unpinAxis: false,
+        tickDensity: default, tickDensityCustom: 5, type: log, __FILE: app-marketing-pinterest-ads/pinterest_overview.dashboard.lookml,
+        __LINE_NUM: 381}]
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -424,10 +443,10 @@
     model: marketing_analytics
     explore: pinterest_ad_group_date_fact
     type: single_value
-    fields: [fact.total_cost, last_fact.total_cost, fact.total_conversions,
-      last_fact.total_conversions, fact.average_cost_per_conversion, last_fact.average_cost_per_conversion,
-      fact.average_conversion_rate, last_fact.average_conversion_rate, fact.average_click_rate,
-      last_fact.average_click_rate, fact.cost_per_click, last_fact.cost_per_click]
+    fields: [fact.total_cost, last_fact.total_cost, fact.total_conversions, last_fact.total_conversions,
+      fact.average_cost_per_conversion, last_fact.average_cost_per_conversion, fact.average_conversion_rate,
+      last_fact.average_conversion_rate, fact.average_click_rate, last_fact.average_click_rate,
+      fact.cost_per_click, last_fact.cost_per_click]
     sorts: [cost_per_conversion_percent_change]
     limit: 500
     dynamic_fields: [{table_calculation: cost_change, label: Cost Change, expression: "${fact.total_cost}\
@@ -461,9 +480,9 @@
     show_comparison_label: false
     hidden_fields: [last_fact.total_cost, fact.total_conversions, last_fact.total_conversions,
       last_fact.average_click_rate, fact.average_conversion_rate, fact.average_cost_per_conversion,
-      last_fact.average_cost_per_conversion, last_fact.cost_per_click,
-      fact.cost_per_click, last_fact.average_conversion_rate, total_conversion_change,
-      fact.total_cost, cost_change, cost_per_conversion_percent_change, cost_per_click_percent_change,
+      last_fact.average_cost_per_conversion, last_fact.cost_per_click, fact.cost_per_click,
+      last_fact.average_conversion_rate, total_conversion_change, fact.total_cost,
+      cost_change, cost_per_conversion_percent_change, cost_per_click_percent_change,
       conversion_rate_percent_change]
     listen:
       Period: fact.period
@@ -477,10 +496,10 @@
     model: marketing_analytics
     explore: pinterest_ad_group_date_fact
     type: single_value
-    fields: [fact.total_cost, last_fact.total_cost, fact.total_conversions,
-      last_fact.total_conversions, fact.average_cost_per_conversion, last_fact.average_cost_per_conversion,
-      fact.average_conversion_rate, last_fact.average_conversion_rate, fact.average_click_rate,
-      last_fact.average_click_rate, fact.cost_per_click, last_fact.cost_per_click]
+    fields: [fact.total_cost, last_fact.total_cost, fact.total_conversions, last_fact.total_conversions,
+      fact.average_cost_per_conversion, last_fact.average_cost_per_conversion, fact.average_conversion_rate,
+      last_fact.average_conversion_rate, fact.average_click_rate, last_fact.average_click_rate,
+      fact.cost_per_click, last_fact.cost_per_click]
     sorts: [cost_per_conversion_percent_change]
     limit: 500
     dynamic_fields: [{table_calculation: cost_change, label: Cost Change, expression: "${fact.total_cost}\
@@ -514,10 +533,9 @@
     show_comparison_label: false
     hidden_fields: [last_fact.total_cost, fact.total_conversions, last_fact.total_conversions,
       last_fact.average_click_rate, fact.average_conversion_rate, fact.average_cost_per_conversion,
-      last_fact.average_cost_per_conversion, last_fact.average_conversion_rate,
-      total_conversion_change, fact.total_cost, cost_change, cost_per_conversion_percent_change,
-      conversion_rate_percent_change, last_fact.cost_per_click, click_through_rate_percent_change,
-      fact.average_click_rate]
+      last_fact.average_cost_per_conversion, last_fact.average_conversion_rate, total_conversion_change,
+      fact.total_cost, cost_change, cost_per_conversion_percent_change, conversion_rate_percent_change,
+      last_fact.cost_per_click, click_through_rate_percent_change, fact.average_click_rate]
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
@@ -530,8 +548,8 @@
     model: marketing_analytics
     explore: pinterest_ad_group_date_fact
     type: looker_line
-    fields: [fact.date_date, fact.cost_per_click, fact.average_click_rate,
-      fact.total_clicks]
+    fields: [fact.date_date, fact.average_click_rate, fact.total_clicks]
+    fill_fields: [fact.date_date]
     sorts: [fact.date_date desc]
     limit: 500
     query_timezone: America/New_York
@@ -540,17 +558,16 @@
       palette_id: fuchsia_to_green
       options:
         steps: 5
+        __FILE: app-marketing-pinterest-ads/pinterest_overview.dashboard.lookml
+        __LINE_NUM: 542
     x_axis_gridlines: false
     y_axis_gridlines: true
     show_view_names: false
-    y_axes: [{label: '', orientation: left, series: [{axisId: fact.cost_per_click,
-            id: fact.cost_per_click, name: Cost per Click}], showLabels: true,
-        showValues: true, unpinAxis: false, tickDensity: default, type: linear}, {
-        label: !!null '', orientation: left, series: [{axisId: fact.average_click_rate,
-            id: fact.average_click_rate, name: Click Through Rate}], showLabels: true,
+    y_axes: [{label: !!null '', orientation: left, series: [{axisId: fact.average_click_rate,
+            id: fact.average_click_rate, name: Click Through Rate}], showLabels: false,
         showValues: true, unpinAxis: false, tickDensity: default, type: linear}, {
         label: !!null '', orientation: right, series: [{axisId: fact.total_clicks,
-            id: fact.total_clicks, name: Clicks}], showLabels: true, showValues: true,
+            id: fact.total_clicks, name: Clicks}], showLabels: false, showValues: true,
         unpinAxis: false, tickDensity: default, type: linear}]
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -565,8 +582,7 @@
     trellis: ''
     stacking: ''
     limit_displayed_rows: false
-    hidden_series: [fact.average_conversion_rate, fact.total_conversions, fact.total_clicks,
-      fact.average_click_rate]
+    hidden_series: [fact.average_conversion_rate, fact.total_conversions]
     legend_position: center
     series_types: {}
     point_style: none
@@ -606,3 +622,24 @@
     col: 16
     width: 8
     height: 6
+  filters:
+  - name: Period
+    title: Period
+    type: field_filter
+    default_value: 28 day
+    allow_multiple_values: false
+    required: true
+    model: marketing_analytics
+    explore: pinterest_ads_ad_impressions
+    listens_to_filters: []
+    field: fact.period
+  - name: Period Latest
+    title: Period Latest
+    type: field_filter
+    default_value: 'Yes'
+    allow_multiple_values: false
+    required: true
+    model: marketing_analytics
+    explore: pinterest_ads_ad_impressions
+    listens_to_filters: []
+    field: fact.date_period_latest
