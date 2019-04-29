@@ -10,9 +10,6 @@
     fields: [fact.date_date, fact.total_cost, fact.average_cost_per_conversion, fact.average_conversion_rate,
       fact.total_conversions, fact.average_cost_per_click, fact.average_click_rate]
     fill_fields: [fact.date_date]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [fact.date_date desc]
     limit: 500
     query_timezone: America/New_York
@@ -97,9 +94,6 @@
     type: looker_bar
     fields: [fact.date_day_of_week, fact.average_conversion_rate]
     fill_fields: [fact.date_day_of_week]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [fact.average_conversion_rate desc]
     limit: 500
     query_timezone: America/New_York
@@ -175,9 +169,6 @@
     explore: pinterest_ad_group_date_fact
     type: looker_bar
     fields: [ad_group.bid_type, fact.average_conversion_rate]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [fact.average_conversion_rate desc]
     limit: 500
     query_timezone: America/New_York
@@ -257,8 +248,6 @@
       fact.average_conversion_rate_period_percent_change]
     filters:
       fact.average_conversion_rate_period_percent_change: NOT NULL
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [fact.average_conversion_rate_period_percent_change desc]
     limit: 50
     column_limit: 50
@@ -334,8 +323,6 @@
       ad.name]
     filters:
       fact.average_conversion_rate_period_percent_change: NOT NULL
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [fact.average_conversion_rate_period_percent_change desc]
     limit: 50
     column_limit: 50

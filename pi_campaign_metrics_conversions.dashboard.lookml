@@ -10,9 +10,6 @@
     fields: [fact.date_date, fact.total_cost, fact.average_cost_per_conversion, fact.average_conversion_rate,
       fact.total_conversions, fact.average_cost_per_click, fact.average_click_rate]
     fill_fields: [fact.date_date]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [fact.date_date desc]
     limit: 500
     query_timezone: America/New_York
@@ -97,9 +94,6 @@
     type: looker_bar
     fields: [fact.date_day_of_week, fact.total_conversions]
     fill_fields: [fact.date_day_of_week]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [fact.total_conversions desc]
     limit: 500
     query_timezone: America/New_York
@@ -175,9 +169,6 @@
     explore: pinterest_ad_group_date_fact
     type: looker_bar
     fields: [ad_group.bid_type, fact.total_conversions]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [fact.total_conversions desc]
     limit: 500
     query_timezone: America/New_York
@@ -256,10 +247,6 @@
       last_fact.total_cost, fact.total_conversions_period_delta]
     filters:
       fact.total_conversions_period_delta_abs: ">0"
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
-      account.account_name: ''
-      ad_group.ad_group_name: ''
     sorts: [fact.total_conversions_period_delta_abs desc]
     limit: 50
     column_limit: 50
@@ -331,10 +318,6 @@
       last_fact.total_cost, fact.total_conversions_period_delta, ad.display_url]
     filters:
       fact.total_conversions_period_delta_abs: ">0"
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
-      account.account_name: ''
-      ad_group.ad_group_name: ''
     sorts: [fact.total_conversions_period_delta_abs desc]
     limit: 50
     column_limit: 50
@@ -406,10 +389,6 @@
       last_fact.total_cost, fact.total_conversions_period_delta, ad.name]
     filters:
       fact.total_conversions_period_delta_abs: ">0"
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
-      account.account_name: ''
-      ad_group.ad_group_name: ''
     sorts: [fact.total_conversions_period_delta_abs desc]
     limit: 50
     column_limit: 50

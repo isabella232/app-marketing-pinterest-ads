@@ -10,9 +10,6 @@
     fields: [fact.date_date, fact.total_cost, fact.average_cost_per_conversion, fact.total_conversions,
       fact.total_clicks, fact.total_impressions]
     fill_fields: [fact.date_date]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [fact.date_date desc]
     limit: 500
     query_timezone: America/New_York
@@ -98,9 +95,6 @@
     type: looker_bar
     fields: [fact.date_day_of_week, fact.total_impressions]
     fill_fields: [fact.date_day_of_week]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [fact.total_impressions desc]
     limit: 500
     query_timezone: America/New_York
@@ -180,9 +174,6 @@
     explore: pinterest_ad_group_date_fact
     type: looker_bar
     fields: [ad_group.bid_type, fact.total_impressions]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [fact.total_impressions desc]
     limit: 500
     query_timezone: America/New_York
@@ -265,10 +256,6 @@
       fact.total_impressions]
     filters:
       fact.total_conversions_period_delta_abs: ">0"
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
-      account.account_name: ''
-      ad_group.ad_group_name: ''
     sorts: [fact.total_conversions_period_delta_abs desc]
     limit: 50
     column_limit: 50
@@ -339,10 +326,6 @@
       fact.total_impressions, ad.name]
     filters:
       fact.total_conversions_period_delta_abs: ">0"
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
-      account.account_name: ''
-      ad_group.ad_group_name: ''
     sorts: [fact.total_conversions_period_delta_abs desc]
     limit: 50
     column_limit: 50
@@ -413,10 +396,6 @@
       fact.total_impressions, ad.display_url]
     filters:
       fact.total_conversions_period_delta_abs: ">0"
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
-      account.account_name: ''
-      ad_group.ad_group_name: ''
     sorts: [fact.total_conversions_period_delta_abs desc]
     limit: 50
     column_limit: 50

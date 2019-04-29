@@ -10,9 +10,6 @@
     fields: [fact.date_date, fact.total_cost, fact.average_cost_per_conversion, fact.total_conversions,
       fact.total_clicks, fact.average_cost_per_click, fact.average_cost_per_impression]
     fill_fields: [fact.date_date]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [fact.date_date desc]
     limit: 500
     query_timezone: America/New_York
@@ -97,9 +94,6 @@
     explore: pinterest_ad_group_date_fact
     type: looker_bar
     fields: [ad_group.bid_type, fact.average_cost_per_impression]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [fact.average_cost_per_impression desc]
     limit: 500
     query_timezone: America/New_York
@@ -180,9 +174,6 @@
     type: looker_bar
     fields: [fact.date_day_of_week, fact.average_cost_per_impression]
     fill_fields: [fact.date_day_of_week]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [fact.average_cost_per_impression desc]
     limit: 500
     query_timezone: America/New_York
@@ -263,10 +254,6 @@
       fact.average_cost_per_impression]
     filters:
       fact.total_conversions_period_delta_abs: ">0"
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
-      account.account_name: ''
-      ad_group.ad_group_name: ''
     sorts: [fact.total_impressions_period_delta desc]
     limit: 50
     column_limit: 50
@@ -339,10 +326,6 @@
       fact.average_cost_per_impression, ad.name]
     filters:
       fact.total_conversions_period_delta_abs: ">0"
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
-      account.account_name: ''
-      ad_group.ad_group_name: ''
     sorts: [fact.total_impressions_period_delta desc]
     limit: 50
     column_limit: 50
@@ -415,10 +398,6 @@
       fact.average_cost_per_impression, ad.display_url]
     filters:
       fact.total_conversions_period_delta_abs: ">0"
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
-      account.account_name: ''
-      ad_group.ad_group_name: ''
     sorts: [fact.total_impressions_period_delta desc]
     limit: 50
     column_limit: 50

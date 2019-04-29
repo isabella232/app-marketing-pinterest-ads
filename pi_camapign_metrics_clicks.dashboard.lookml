@@ -10,9 +10,6 @@
     fields: [fact.date_date, fact.total_cost, fact.average_cost_per_conversion, fact.total_conversions,
       fact.total_clicks]
     fill_fields: [fact.date_date]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [fact.date_date desc]
     limit: 500
     query_timezone: America/New_York
@@ -98,9 +95,6 @@
     type: looker_bar
     fields: [fact.date_day_of_week, fact.total_clicks]
     fill_fields: [fact.date_day_of_week]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [fact.total_clicks desc]
     limit: 500
     query_timezone: America/New_York
@@ -180,9 +174,6 @@
     explore: pinterest_ad_group_date_fact
     type: looker_bar
     fields: [fact.total_clicks, ad_group.bid_type]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [fact.total_clicks desc]
     limit: 500
     query_timezone: America/New_York
@@ -265,8 +256,6 @@
       ad.name]
     filters:
       fact.total_conversions_period_delta_abs: ">0"
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [last_fact.total_clicks_period_delta desc]
     limit: 50
     column_limit: 50
@@ -338,8 +327,6 @@
       ad.display_url]
     filters:
       fact.total_conversions_period_delta_abs: ">0"
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [last_fact.total_clicks_period_delta desc]
     limit: 50
     column_limit: 50
@@ -411,8 +398,6 @@
       ad_group.ad_group_name]
     filters:
       fact.total_conversions_period_delta_abs: ">0"
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [last_fact.total_clicks_period_delta desc]
     limit: 50
     column_limit: 50
