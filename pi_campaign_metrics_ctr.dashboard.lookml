@@ -170,9 +170,6 @@
     type: looker_bar
     fields: [fact.date_day_of_week, fact.average_click_rate]
     fill_fields: [fact.date_day_of_week]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [fact.average_click_rate desc]
     limit: 500
     query_timezone: America/New_York
@@ -255,10 +252,6 @@
       ad_group.ad_group_name]
     filters:
       fact.average_click_rate_period_percent_change: NOT NULL
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
-      account.account_name: ''
-      ad_group.ad_group_name: ''
     sorts: [fact.average_click_rate_period_percent_change desc]
     limit: 50
     column_limit: 50
@@ -338,10 +331,6 @@
       campaign.campaign_name]
     filters:
       fact.average_click_rate_period_percent_change: NOT NULL
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
-      campaign.campaign_name: ''
-      account.account_name: ''
     sorts: [fact.average_click_rate_period_percent_change desc]
     limit: 50
     column_limit: 50
@@ -421,9 +410,6 @@
       ad.name]
     filters:
       fact.average_click_rate_period_percent_change: NOT NULL
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
-      account.account_name: ''
     sorts: [fact.average_click_rate_period_percent_change desc]
     limit: 50
     column_limit: 50
