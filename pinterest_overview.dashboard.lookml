@@ -10,9 +10,6 @@
       last_fact.total_conversions, fact.average_cost_per_conversion, last_fact.average_cost_per_conversion,
       fact.average_conversion_rate, last_fact.average_conversion_rate, fact.average_click_rate,
       last_fact.average_click_rate, fact.cost_per_click, last_fact.cost_per_click]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [cost_per_conversion_percent_change]
     limit: 500
     dynamic_fields: [{table_calculation: cost_change, label: Cost Change, expression: "${fact.total_cost}\
@@ -62,9 +59,6 @@
       last_fact.total_conversions, fact.average_cost_per_conversion, last_fact.average_cost_per_conversion,
       fact.average_conversion_rate, last_fact.average_conversion_rate, fact.average_click_rate,
       last_fact.average_click_rate, fact.cost_per_click, last_fact.cost_per_click]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [cost_per_conversion_percent_change]
     limit: 500
     dynamic_fields: [{table_calculation: cost_change, label: Cost Change, expression: "${fact.total_cost}\
@@ -114,9 +108,6 @@
       last_fact.total_conversions, fact.average_cost_per_conversion, last_fact.average_cost_per_conversion,
       fact.average_conversion_rate, last_fact.average_conversion_rate, fact.average_click_rate,
       last_fact.average_click_rate, fact.cost_per_click, last_fact.cost_per_click]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [cost_per_conversion_percent_change]
     limit: 500
     dynamic_fields: [{table_calculation: cost_change, label: Cost Change, expression: "${fact.total_cost}\
@@ -166,9 +157,6 @@
       last_fact.total_conversions, fact.average_cost_per_conversion, last_fact.average_cost_per_conversion,
       fact.average_conversion_rate, last_fact.average_conversion_rate, fact.average_click_rate,
       last_fact.average_click_rate, fact.cost_per_click, last_fact.cost_per_click]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [cost_per_conversion_percent_change]
     limit: 500
     dynamic_fields: [{table_calculation: cost_change, label: Cost Change, expression: "${fact.total_cost}\
@@ -218,9 +206,6 @@
     fields: [fact.date_date, fact.average_cost_per_conversion, fact.average_conversion_rate,
       fact.total_conversions]
     fill_fields: [fact.date_date]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [fact.date_date desc]
     limit: 500
     query_timezone: America/New_York
@@ -298,9 +283,6 @@
     explore: pinterest_ad_group_date_fact
     type: looker_area
     fields: [fact.date_day_of_period, fact.cumulative_spend, last_fact.cumulative_spend]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [fact.date_day_of_period]
     limit: 500
     query_timezone: America/New_York
@@ -368,9 +350,6 @@
     explore: pinterest_ad_group_date_fact
     type: looker_column
     fields: [fact.date_period, fact.total_impressions, fact.total_clicks, fact.total_conversions]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [fact.date_period desc]
     limit: 500
     query_timezone: America/New_York
@@ -449,9 +428,6 @@
       last_fact.total_conversions, fact.average_cost_per_conversion, last_fact.average_cost_per_conversion,
       fact.average_conversion_rate, last_fact.average_conversion_rate, fact.average_click_rate,
       last_fact.average_click_rate, fact.cost_per_click, last_fact.cost_per_click]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [cost_per_conversion_percent_change]
     limit: 500
     dynamic_fields: [{table_calculation: cost_change, label: Cost Change, expression: "${fact.total_cost}\
@@ -505,9 +481,6 @@
       last_fact.total_conversions, fact.average_cost_per_conversion, last_fact.average_cost_per_conversion,
       fact.average_conversion_rate, last_fact.average_conversion_rate, fact.average_click_rate,
       last_fact.average_click_rate, fact.cost_per_click, last_fact.cost_per_click]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [cost_per_conversion_percent_change]
     limit: 500
     dynamic_fields: [{table_calculation: cost_change, label: Cost Change, expression: "${fact.total_cost}\
@@ -560,9 +533,6 @@
     fields: [fact.date_date, fact.cost_per_click, fact.average_click_rate,
       fact.total_clicks]
     fill_fields: [fact.date_date]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [fact.date_date desc]
     limit: 500
     query_timezone: America/New_York
