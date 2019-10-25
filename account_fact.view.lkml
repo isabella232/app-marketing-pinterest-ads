@@ -52,7 +52,7 @@ view: pinterest_account_key_base {
 }
 
 view: pinterest_account_date_fact {
-  extends: [date_base, pinterest_ad_metrics_base, pinterest_account_key_base, period_base, ad_metrics_period_comparison_base, ad_metrics_weighted_period_comparison_base]
+  extends: [date_base, pinterest_ad_metrics_base, pinterest_account_key_base, period_base, ad_metrics_period_comparison_base, ad_metrics_base]
 
   derived_table: {
     datagroup_trigger: pinterest_ads_etl_datagroup
