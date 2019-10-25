@@ -1,7 +1,7 @@
 include: "pinterest_ad_metrics_base.view"
 
 view: pinterest_ad_impressions_base {
-  extends: [date_base, period_base, pinterest_ad_metrics_base]
+  extends: [date_base, period_base, pinterest_ad_metrics_base, ad_metrics_base]
 }
 
 explore: pinterest_ad_impressions_template {

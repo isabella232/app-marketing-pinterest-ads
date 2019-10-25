@@ -1,6 +1,6 @@
 view: pinterest_ad_metrics_base_template {
   extension: required
-  extends: [google_ad_metrics_base]
+  extends: [ad_metrics_base]
 
   dimension: average_position {
     type: number
